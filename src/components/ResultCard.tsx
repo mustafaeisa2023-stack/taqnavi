@@ -2,12 +2,16 @@ type ResultCardProps = {
   rank: number;
   title: string;
   percentage: number;
+  reason: string;
 };
 
-export function ResultCard({ rank, title, percentage }: ResultCardProps) {
+export function ResultCard({ rank, title, percentage, reason }: ResultCardProps) {
   return (
     <article className="result-card">
-      <strong>#{rank} {title}</strong>
+      <div>
+        <strong>#{rank} {title}</strong>
+        <p className="result-reason">{reason}</p>
+      </div>
       <span>{percentage}% match</span>
     </article>
   );

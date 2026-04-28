@@ -16,7 +16,13 @@ h1,h2,h3 { margin: 0 0 12px; }
 .progress-fill { height:100%; background:linear-gradient(90deg,#22d3ee,#14b8ff); }
 .error { color: #fca5a5; }
 ul { margin: 8px 0 14px 20px; }
-.result-card { display:flex; justify-content:space-between; padding:10px 12px; background:#11284a; border-radius:10px; border:1px solid #2b4f7f; }
+.path-list { margin: 8px 0 14px 20px; padding-left: 4px; }
+.result-layout section { margin-bottom: 4px; }
+.primary-match { margin-bottom: 10px; padding: 14px; border: 1px solid #2f5f92; border-radius: 14px; background: linear-gradient(180deg, #123767, #10284a); }
+.lead { color: #cde5ff; margin: 0; }
+.result-card { display:flex; justify-content:space-between; gap: 12px; padding:12px; background:#11284a; border-radius:10px; border:1px solid #2b4f7f; }
+.result-reason { color:#a8c6ee; font-size: .92rem; margin: 4px 0 0; }
+.result-card span { font-weight: 700; color:#7ee8ff; white-space: nowrap; }
 .top3 { display:grid; gap:8px; margin-bottom:16px; }
 .chip { display:inline-block; background:#11345f; border:1px solid #2f5f92; padding:4px 10px; border-radius:999px; margin-bottom:8px; }
 .disclaimer { color:#a8c6ee; font-size:.92rem; margin:16px 0; }
