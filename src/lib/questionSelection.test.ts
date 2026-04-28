@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { QUESTIONS } from '../data/questions';
+import type { QuestionCategory } from '../types/quiz';
 import { selectBalancedQuestions } from './questionSelection';
 
-const REQUIRED_CATEGORIES = [
+const REQUIRED_CATEGORIES: QuestionCategory[] = [
   'interest',
   'thinking_style',
   'problem_solving',
