@@ -3,20 +3,24 @@ import { QuizScreen } from './components/QuizScreen';
 import { ResultScreen } from './components/ResultScreen';
 import { StartScreen } from './components/StartScreen';
 import { QUESTIONS } from './data/questions';
+import { selectBalancedQuestions } from './lib/questionSelection';
 import { buildQuizResult } from './lib/scoring';
+import type { Question } from './types/quiz';
 import './styles.css';
 
 type Stage = 'start' | 'quiz' | 'result';
 
 function App() {
   const [stage, setStage] = useState<Stage>('start');
+  const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<string[]>([]);
   const [error, setError] = useState('');
 
-  const result = useMemo(() => (stage === 'result' ? buildQuizResult(QUESTIONS, answers) : null), [answers, stage]);
+  const result = useMemo(() => (stage === 'result' ? buildQuizResult(quizQuestions, answers) : null), [answers, quizQuestions, stage]);
 
   const startQuiz = () => {
+    setQuizQuestions(selectBalancedQuestions(QUESTIONS));
     setStage('quiz');
     setCurrentIndex(0);
     setAnswers([]);
@@ -36,7 +40,7 @@ function App() {
       return;
     }
 
-    if (currentIndex === QUESTIONS.length - 1) {
+    if (currentIndex === quizQuestions.length - 1) {
       setStage('result');
       return;
     }
@@ -50,9 +54,9 @@ function App() {
   return (
     <main className="shell">
       <QuizScreen
-        question={QUESTIONS[currentIndex]}
+        question={quizQuestions[currentIndex]}
         index={currentIndex}
-        total={QUESTIONS.length}
+        total={quizQuestions.length}
         selectedOptionId={answers[currentIndex]}
         onSelect={handleSelect}
         onNext={handleNext}

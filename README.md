@@ -20,16 +20,25 @@ npm run dev
 npm run build
 ```
 
-## Sprint 1 includes
+## Sprint 2 summary
 
-- Landing/start screen
-- 12-question scenario-based quiz flow
-- Progress indicator
-- Weighted deterministic scoring
-- Primary + top 3 track recommendations with percentages
-- Restart quiz flow
-- Local question bank and local track profiles for six tracks
-- Frontend-only implementation (no backend/auth/database/API integration)
+Sprint 2 expands the local question bank and introduces balanced quiz selection per attempt while keeping the app frontend-only and deterministic in scoring.
+
+### Sprint 2 behavior
+
+- Question bank expanded to **36 local scenario-based questions**.
+- Every question now includes a `category` from:
+  - `interest`
+  - `thinking_style`
+  - `problem_solving`
+  - `work_preference`
+  - `learning_style`
+  - `real_world_scenario`
+- Each quiz attempt still asks exactly **12 questions**.
+- Question selection is balanced: every attempt includes at least one question from each category.
+- No duplicate questions are selected within a single attempt.
+- Restart generates a fresh balanced 12-question set.
+- Scoring weights are unchanged in behavior: deterministic for any fixed selected question set + answers.
 
 Tracks included:
 - frontend
@@ -43,11 +52,11 @@ Tracks included:
 
 1. Open app and confirm start screen appears with disclaimer.
 2. Click **Start Quiz** and verify question 1 loads.
-3. Try clicking next without selecting an option; verify inline validation appears.
-4. Select answers through all 12 questions and verify progress updates each step.
-5. Confirm result screen appears after final question.
-6. Confirm primary match, top 3 matches, and percentages are shown.
-7. Confirm result includes “why fit”, strengths, first skills, and mini project.
-8. Confirm disclaimer states recommendation is not scientific diagnosis.
-9. Click **Restart Quiz** and verify flow resets to start.
-10. Repeat with different answer combinations and verify deterministic results.
+3. Confirm the quiz contains exactly 12 questions (via progress indicator).
+4. Try clicking next without selecting an option; verify inline validation appears.
+5. Complete all 12 questions and verify the result screen appears.
+6. Confirm primary match and Top 3 matches still appear with percentages.
+7. Confirm disclaimer still states this is guidance, not a scientific diagnosis.
+8. Click **Restart Quiz** and verify a new 12-question attempt starts.
+9. Confirm restart still supports full completion to results.
+10. Check layout on mobile width and verify core flow remains usable.
