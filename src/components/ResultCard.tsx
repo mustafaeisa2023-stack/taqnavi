@@ -8,11 +8,12 @@ type ResultCardProps = {
 export function ResultCard({ rank, title, percentage, reason }: ResultCardProps) {
   return (
     <article className="result-card">
-      <div>
-        <strong>#{rank} {title}</strong>
+      <div className="result-rank">#{rank}</div>
+      <div className="result-main">
+        <strong>{title}</strong>
         <p className="result-reason">{reason}</p>
       </div>
-      <span>{percentage}% match</span>
+      <span className="result-match">{percentage}% match</span>
     </article>
   );
 }
