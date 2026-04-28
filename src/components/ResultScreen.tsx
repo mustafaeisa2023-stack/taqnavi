@@ -17,42 +17,42 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
         <p className="lead">{primary.shortDescription}</p>
       </article>
 
-      <section>
+      <section className="content-card">
         <h3>Why this fits</h3>
         <p>{primary.whyItFits}</p>
       </section>
 
-      <section>
+      <section className="content-card">
         <h3>Your likely strengths</h3>
         <ul>{primary.strengths.map((s) => <li key={s}>{s}</li>)}</ul>
       </section>
 
-      <section>
+      <section className="content-card">
         <h3>Watch out</h3>
         <ul>{primary.watchOut.map((item) => <li key={item}>{item}</li>)}</ul>
       </section>
 
-      <section>
+      <section className="content-card">
         <h3>First skills to learn</h3>
         <ul>{primary.firstSkills.map((s) => <li key={s}>{s}</li>)}</ul>
       </section>
 
-      <section>
+      <section className="content-card">
         <h3>Beginner learning path</h3>
         <ol className="path-list">{primary.learningPath.map((step) => <li key={step}>{step}</li>)}</ol>
       </section>
 
-      <section>
+      <section className="content-card">
         <h3>Mini project to try</h3>
         <p>{primary.miniProject}</p>
       </section>
 
-      <section>
+      <section className="content-card">
         <h3>Starter topics</h3>
         <ul>{primary.starterTopics.map((topic) => <li key={topic}>{topic}</li>)}</ul>
       </section>
 
-      <section>
+      <section className="content-card top3-section">
         <h3>Your top 3 matches</h3>
         <div className="top3">
           {top3.map((entry, i) => (
@@ -68,7 +68,7 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
       </section>
 
       <p className="disclaimer">This result is a guided recommendation based on your answers. It is not a scientific diagnosis or a psychometric assessment.</p>
-      <button className="primary" onClick={onRestart}>Restart Quiz</button>
+      <button className="primary restart" type="button" onClick={onRestart}>Restart Quiz</button>
     </section>
   );
 }
