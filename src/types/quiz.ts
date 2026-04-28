@@ -6,6 +6,14 @@ export type TrackId =
   | 'devops_cloud'
   | 'ui_ux';
 
+export type QuestionCategory =
+  | 'interest'
+  | 'thinking_style'
+  | 'problem_solving'
+  | 'work_preference'
+  | 'learning_style'
+  | 'real_world_scenario';
+
 export type TrackProfile = {
   id: TrackId;
   title: string;
@@ -25,6 +33,7 @@ export type AnswerOption = {
 export type Question = {
   id: string;
   prompt: string;
+  category: QuestionCategory;
   options: AnswerOption[];
 };
 
