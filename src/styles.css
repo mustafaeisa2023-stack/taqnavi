@@ -226,3 +226,10 @@ ul, ol { margin: 8px 0 0 20px; }
   .result-card { grid-template-columns: auto 1fr; }
   .result-match { grid-column: 2; }
 }
+
+.lang-toggle { display:flex; gap:8px; justify-content:flex-end; margin-bottom:10px; }
+.lang-toggle button { border:1px solid #2e5f95; background:#12294a; color:#d4e9ff; border-radius:8px; padding:6px 10px; cursor:pointer; }
+.lang-toggle button.active { background:#1f4a7e; color:#7fdcff; }
+.brand-logo { width:min(280px,70%); height:auto; margin:0 auto 10px; display:block; }
+html[dir='rtl'] .info-strip, html[dir='rtl'] .option { text-align:right; }
+html[dir='rtl'] ul, html[dir='rtl'] ol { margin: 8px 20px 0 0; }
