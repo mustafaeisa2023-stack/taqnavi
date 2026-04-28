@@ -39,13 +39,13 @@ export type TrackProfile = {
 
 export type AnswerOption = {
   id: string;
-  label: string;
+  label: LocalizedText;
   weights: Partial<Record<TrackId, number>>;
 };
 
 export type Question = {
   id: string;
-  prompt: string;
+  prompt: LocalizedText;
   category: QuestionCategory;
   options: AnswerOption[];
 };
