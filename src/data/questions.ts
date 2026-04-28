@@ -149,77 +149,77 @@ export const QUESTIONS: Question[] = [
     { id: 'q24d', label: { en: 'Secure defaults and least-privilege access.', ar: 'إعدادات آمنة افتراضيًا ووصول بأقل الصلاحيات.' }, weights: { cybersecurity: 3 } }
   ]},
 
-  { id: 'q25', category: 'learning_style', prompt: { en: 'Which learning resource helps you improve fastest?', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q25a', label: { en: 'Interactive UI teardown videos and design critiques.', ar: 'تحسين تجربة المستخدم والواجهة لتصبح أوضح وأسهل.' }, weights: { frontend: 2, ui_ux: 2 } },
-    { id: 'q25b', label: { en: 'Backend architecture walkthroughs with code labs.', ar: 'تحسين منطق Backend وواجهات API وتدفق البيانات.' }, weights: { backend: 3 } },
-    { id: 'q25c', label: { en: 'Notebook-based tutorials with datasets and metrics.', ar: 'الاعتماد على تحليل البيانات والقياس والتجريب لاتخاذ القرار.' }, weights: { ai_data: 3 } },
-    { id: 'q25d', label: { en: 'Capture-the-flag labs and security case studies.', ar: 'تعزيز الأمان وتقليل المخاطر ومعالجة الثغرات المحتملة.' }, weights: { cybersecurity: 3 } }
+  { id: 'q25', category: 'learning_style', prompt: { en: 'Which learning resource helps you improve fastest?', ar: 'أي مورد تعلّم يساعدك على التطور بأسرع شكل؟' }, options: [
+    { id: 'q25a', label: { en: 'Interactive UI teardown videos and design critiques.', ar: 'فيديوهات تفكيك UI بشكل تفاعلي مع نقد للتصميم.' }, weights: { frontend: 2, ui_ux: 2 } },
+    { id: 'q25b', label: { en: 'Backend architecture walkthroughs with code labs.', ar: 'شروحات معمارية Backend مع تمارين عملية على الكود.' }, weights: { backend: 3 } },
+    { id: 'q25c', label: { en: 'Notebook-based tutorials with datasets and metrics.', ar: 'دروس عبر Notebooks تتضمن datasets ومقاييس تقييم.' }, weights: { ai_data: 3 } },
+    { id: 'q25d', label: { en: 'Capture-the-flag labs and security case studies.', ar: 'مختبرات Capture-the-Flag ودراسات حالات أمنية.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q26', category: 'learning_style', prompt: { en: 'When practicing, you prefer to start by:', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q26a', label: { en: 'Building a visible demo and refining details.', ar: 'تحسين تجربة المستخدم والواجهة لتصبح أوضح وأسهل.' }, weights: { frontend: 3, ui_ux: 1 } },
-    { id: 'q26b', label: { en: 'Creating robust service logic and tests.', ar: 'تحسين منطق Backend وواجهات API وتدفق البيانات.' }, weights: { backend: 3 } },
-    { id: 'q26c', label: { en: 'Running experiments and comparing outcomes.', ar: 'الاعتماد على تحليل البيانات والقياس والتجريب لاتخاذ القرار.' }, weights: { ai_data: 3 } },
-    { id: 'q26d', label: { en: 'Configuring secure infrastructure in a sandbox.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { devops_cloud: 2, cybersecurity: 2 } }
+  { id: 'q26', category: 'learning_style', prompt: { en: 'When practicing, you prefer to start by:', ar: 'عند التدرّب، تفضّل أن تبدأ بـ:' }, options: [
+    { id: 'q26a', label: { en: 'Building a visible demo and refining details.', ar: 'بناء Demo واضح ثم صقل التفاصيل.' }, weights: { frontend: 3, ui_ux: 1 } },
+    { id: 'q26b', label: { en: 'Creating robust service logic and tests.', ar: 'إنشاء منطق خدمات قوي مع اختبارات.' }, weights: { backend: 3 } },
+    { id: 'q26c', label: { en: 'Running experiments and comparing outcomes.', ar: 'تنفيذ تجارب ومقارنة النتائج.' }, weights: { ai_data: 3 } },
+    { id: 'q26d', label: { en: 'Configuring secure infrastructure in a sandbox.', ar: 'إعداد بنية تحتية آمنة داخل بيئة Sandbox.' }, weights: { devops_cloud: 2, cybersecurity: 2 } }
   ]},
-  { id: 'q27', category: 'learning_style', prompt: { en: 'How do you know you truly learned a topic?', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q27a', label: { en: 'I can make it simple and usable for others.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { ui_ux: 2, frontend: 2 } },
-    { id: 'q27b', label: { en: 'I can explain internal trade-offs and constraints.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { backend: 3 } },
-    { id: 'q27c', label: { en: 'I can measure improvement with reliable metrics.', ar: 'الاعتماد على تحليل البيانات والقياس والتجريب لاتخاذ القرار.' }, weights: { ai_data: 3 } },
-    { id: 'q27d', label: { en: 'I can spot risks and prevent common failures.', ar: 'تعزيز الأمان وتقليل المخاطر ومعالجة الثغرات المحتملة.' }, weights: { cybersecurity: 3, devops_cloud: 1 } }
+  { id: 'q27', category: 'learning_style', prompt: { en: 'How do you know you truly learned a topic?', ar: 'كيف تعرف أنك تعلّمت موضوعًا بشكل حقيقي؟' }, options: [
+    { id: 'q27a', label: { en: 'I can make it simple and usable for others.', ar: 'عندما أستطيع تبسيطه وجعله قابلًا للاستخدام للآخرين.' }, weights: { ui_ux: 2, frontend: 2 } },
+    { id: 'q27b', label: { en: 'I can explain internal trade-offs and constraints.', ar: 'عندما أستطيع شرح المفاضلات الداخلية والقيود.' }, weights: { backend: 3 } },
+    { id: 'q27c', label: { en: 'I can measure improvement with reliable metrics.', ar: 'عندما أستطيع قياس التحسّن بمقاييس موثوقة.' }, weights: { ai_data: 3 } },
+    { id: 'q27d', label: { en: 'I can spot risks and prevent common failures.', ar: 'عندما أستطيع رصد المخاطر ومنع الأعطال الشائعة.' }, weights: { cybersecurity: 3, devops_cloud: 1 } }
   ]},
-  { id: 'q28', category: 'learning_style', prompt: { en: 'Which assignment format motivates you most?', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q28a', label: { en: 'Prototype challenge with user feedback.', ar: 'تحسين تجربة المستخدم والواجهة لتصبح أوضح وأسهل.' }, weights: { ui_ux: 3, frontend: 1 } },
-    { id: 'q28b', label: { en: 'Service implementation with strict test cases.', ar: 'تحسين منطق Backend وواجهات API وتدفق البيانات.' }, weights: { backend: 3 } },
-    { id: 'q28c', label: { en: 'Data challenge with prediction and evaluation.', ar: 'الاعتماد على تحليل البيانات والقياس والتجريب لاتخاذ القرار.' }, weights: { ai_data: 3 } },
-    { id: 'q28d', label: { en: 'Incident simulation and recovery drill.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { devops_cloud: 2, cybersecurity: 2 } }
+  { id: 'q28', category: 'learning_style', prompt: { en: 'Which assignment format motivates you most?', ar: 'أي نوع من الواجبات يحفّزك أكثر؟' }, options: [
+    { id: 'q28a', label: { en: 'Prototype challenge with user feedback.', ar: 'تحدّي Prototype يتضمن ملاحظات مستخدمين.' }, weights: { ui_ux: 3, frontend: 1 } },
+    { id: 'q28b', label: { en: 'Service implementation with strict test cases.', ar: 'تنفيذ خدمة مع حالات اختبار صارمة.' }, weights: { backend: 3 } },
+    { id: 'q28c', label: { en: 'Data challenge with prediction and evaluation.', ar: 'تحدّي بيانات يشمل التنبؤ والتقييم.' }, weights: { ai_data: 3 } },
+    { id: 'q28d', label: { en: 'Incident simulation and recovery drill.', ar: 'محاكاة Incident وتمرين على التعافي.' }, weights: { devops_cloud: 2, cybersecurity: 2 } }
   ]},
-  { id: 'q29', category: 'learning_style', prompt: { en: 'When stuck, you are most likely to:', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q29a', label: { en: 'Replay the user flow and simplify interactions.', ar: 'تحسين تجربة المستخدم والواجهة لتصبح أوضح وأسهل.' }, weights: { frontend: 2, ui_ux: 1 } },
-    { id: 'q29b', label: { en: 'Read docs and inspect low-level implementation details.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { backend: 3 } },
-    { id: 'q29c', label: { en: 'Collect evidence from logs and performance traces.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { ai_data: 2, devops_cloud: 1 } },
-    { id: 'q29d', label: { en: 'Review security assumptions and permissions.', ar: 'تعزيز الأمان وتقليل المخاطر ومعالجة الثغرات المحتملة.' }, weights: { cybersecurity: 3 } }
+  { id: 'q29', category: 'learning_style', prompt: { en: 'When stuck, you are most likely to:', ar: 'عندما تتعثر، ما الذي تُرجّح أن تفعله؟' }, options: [
+    { id: 'q29a', label: { en: 'Replay the user flow and simplify interactions.', ar: 'إعادة تتبّع مسار المستخدم وتبسيط التفاعلات.' }, weights: { frontend: 2, ui_ux: 1 } },
+    { id: 'q29b', label: { en: 'Read docs and inspect low-level implementation details.', ar: 'قراءة التوثيق وفحص تفاصيل التنفيذ منخفضة المستوى.' }, weights: { backend: 3 } },
+    { id: 'q29c', label: { en: 'Collect evidence from logs and performance traces.', ar: 'جمع أدلة من السجلات ومسارات الأداء.' }, weights: { ai_data: 2, devops_cloud: 1 } },
+    { id: 'q29d', label: { en: 'Review security assumptions and permissions.', ar: 'مراجعة افتراضات الأمان والصلاحيات.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q30', category: 'learning_style', prompt: { en: 'You retain knowledge best when:', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q30a', label: { en: 'I iterate on visuals and interaction details.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { frontend: 2, ui_ux: 2 } },
-    { id: 'q30b', label: { en: 'I build systems end-to-end and test them.', ar: 'تحسين تجربة المستخدم والواجهة لتصبح أوضح وأسهل.' }, weights: { backend: 2, devops_cloud: 1 } },
-    { id: 'q30c', label: { en: 'I compare approaches with data-backed results.', ar: 'الاعتماد على تحليل البيانات والقياس والتجريب لاتخاذ القرار.' }, weights: { ai_data: 3 } },
-    { id: 'q30d', label: { en: 'I model threats and defend against them.', ar: 'الاعتماد على تحليل البيانات والقياس والتجريب لاتخاذ القرار.' }, weights: { cybersecurity: 3 } }
+  { id: 'q30', category: 'learning_style', prompt: { en: 'You retain knowledge best when:', ar: 'تحتفظ بالمعرفة بشكل أفضل عندما:' }, options: [
+    { id: 'q30a', label: { en: 'I iterate on visuals and interaction details.', ar: 'أكرّر التحسين على العناصر البصرية وتفاصيل التفاعل.' }, weights: { frontend: 2, ui_ux: 2 } },
+    { id: 'q30b', label: { en: 'I build systems end-to-end and test them.', ar: 'أبني أنظمة كاملة من البداية للنهاية وأختبرها.' }, weights: { backend: 2, devops_cloud: 1 } },
+    { id: 'q30c', label: { en: 'I compare approaches with data-backed results.', ar: 'أقارن بين الأساليب اعتمادًا على نتائج مدعومة بالبيانات.' }, weights: { ai_data: 3 } },
+    { id: 'q30d', label: { en: 'I model threats and defend against them.', ar: 'أُجري Threat Modeling وأبني وسائل دفاع ضدها.' }, weights: { cybersecurity: 3 } }
   ]},
 
-  { id: 'q31', category: 'real_world_scenario', prompt: { en: 'A school portal update accidentally exposes private data. What would you lead first?', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q31a', label: { en: 'User-facing messaging so affected users understand next steps.', ar: 'تحسين تجربة المستخدم والواجهة لتصبح أوضح وأسهل.' }, weights: { ui_ux: 2, frontend: 1 } },
-    { id: 'q31b', label: { en: 'Service-side rollback and data access patching.', ar: 'تحسين منطق Backend وواجهات API وتدفق البيانات.' }, weights: { backend: 2, devops_cloud: 1 } },
-    { id: 'q31c', label: { en: 'Forensic analysis to map affected records quickly.', ar: 'تحسين تجربة المستخدم والواجهة لتصبح أوضح وأسهل.' }, weights: { ai_data: 2, cybersecurity: 1 } },
-    { id: 'q31d', label: { en: 'Containment plan, credential resets, and audit controls.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { cybersecurity: 3 } }
+  { id: 'q31', category: 'real_world_scenario', prompt: { en: 'A school portal update accidentally exposes private data. What would you lead first?', ar: 'تحديث في بوابة مدرسية كشف بيانات خاصة بالخطأ. ما الذي ستقوده أولًا؟' }, options: [
+    { id: 'q31a', label: { en: 'User-facing messaging so affected users understand next steps.', ar: 'رسائل واضحة للمستخدمين المتأثرين ليفهموا الخطوات التالية.' }, weights: { ui_ux: 2, frontend: 1 } },
+    { id: 'q31b', label: { en: 'Service-side rollback and data access patching.', ar: 'التراجع على مستوى الخدمة مع إصلاح صلاحيات الوصول للبيانات.' }, weights: { backend: 2, devops_cloud: 1 } },
+    { id: 'q31c', label: { en: 'Forensic analysis to map affected records quickly.', ar: 'تحليل جنائي رقمي لتحديد السجلات المتأثرة بسرعة.' }, weights: { ai_data: 2, cybersecurity: 1 } },
+    { id: 'q31d', label: { en: 'Containment plan, credential resets, and audit controls.', ar: 'خطة احتواء مع إعادة تعيين بيانات الاعتماد وضوابط تدقيق.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q32', category: 'real_world_scenario', prompt: { en: 'Your app launches tomorrow and last-minute failures appear. You focus on:', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q32a', label: { en: 'Clear fallback UI and communication for users.', ar: 'تحسين تجربة المستخدم والواجهة لتصبح أوضح وأسهل.' }, weights: { frontend: 2, ui_ux: 1 } },
-    { id: 'q32b', label: { en: 'Critical backend fixes with safe deployment steps.', ar: 'تحسين منطق Backend وواجهات API وتدفق البيانات.' }, weights: { backend: 3 } },
-    { id: 'q32c', label: { en: 'Release health checks and rollback automation.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { devops_cloud: 3 } },
-    { id: 'q32d', label: { en: 'Security verification of hotfixes before release.', ar: 'تعزيز الأمان وتقليل المخاطر ومعالجة الثغرات المحتملة.' }, weights: { cybersecurity: 3 } }
+  { id: 'q32', category: 'real_world_scenario', prompt: { en: 'Your app launches tomorrow and last-minute failures appear. You focus on:', ar: 'تطبيقك سيُطلق غدًا وظهرت أعطال في اللحظة الأخيرة. على ماذا تركّز؟' }, options: [
+    { id: 'q32a', label: { en: 'Clear fallback UI and communication for users.', ar: 'واجهة UI بديلة واضحة مع تواصل مباشر للمستخدمين.' }, weights: { frontend: 2, ui_ux: 1 } },
+    { id: 'q32b', label: { en: 'Critical backend fixes with safe deployment steps.', ar: 'إصلاحات Backend الحرجة مع خطوات deployment آمنة.' }, weights: { backend: 3 } },
+    { id: 'q32c', label: { en: 'Release health checks and rollback automation.', ar: 'فحوصات صحة الإصدار وأتمتة التراجع (Rollback).' }, weights: { devops_cloud: 3 } },
+    { id: 'q32d', label: { en: 'Security verification of hotfixes before release.', ar: 'التحقق أمنيًا من الإصلاحات السريعة قبل الإطلاق.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q33', category: 'real_world_scenario', prompt: { en: 'A nonprofit asks for a low-budget tech solution. You suggest:', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q33a', label: { en: 'Simple mobile-friendly interface with clear workflows.', ar: 'تحسين تجربة المستخدم والواجهة لتصبح أوضح وأسهل.' }, weights: { frontend: 2, ui_ux: 2 } },
-    { id: 'q33b', label: { en: 'Lean backend with maintainable core features.', ar: 'تحسين منطق Backend وواجهات API وتدفق البيانات.' }, weights: { backend: 3 } },
-    { id: 'q33c', label: { en: 'Basic analytics to monitor impact and improve over time.', ar: 'الاعتماد على تحليل البيانات والقياس والتجريب لاتخاذ القرار.' }, weights: { ai_data: 3 } },
-    { id: 'q33d', label: { en: 'Secure hosting and least-privilege permissions from day one.', ar: 'تعزيز الأمان وتقليل المخاطر ومعالجة الثغرات المحتملة.' }, weights: { devops_cloud: 1, cybersecurity: 2 } }
+  { id: 'q33', category: 'real_world_scenario', prompt: { en: 'A nonprofit asks for a low-budget tech solution. You suggest:', ar: 'منظمة غير ربحية طلبت حلًا تقنيًا منخفض التكلفة. ماذا تقترح؟' }, options: [
+    { id: 'q33a', label: { en: 'Simple mobile-friendly interface with clear workflows.', ar: 'واجهة بسيطة مناسبة للجوال مع مسارات عمل واضحة.' }, weights: { frontend: 2, ui_ux: 2 } },
+    { id: 'q33b', label: { en: 'Lean backend with maintainable core features.', ar: 'Backend خفيف بميزات أساسية قابلة للصيانة.' }, weights: { backend: 3 } },
+    { id: 'q33c', label: { en: 'Basic analytics to monitor impact and improve over time.', ar: 'تحليلات أساسية لمتابعة الأثر والتحسين مع الوقت.' }, weights: { ai_data: 3 } },
+    { id: 'q33d', label: { en: 'Secure hosting and least-privilege permissions from day one.', ar: 'استضافة آمنة وصلاحيات بأقل امتياز منذ اليوم الأول.' }, weights: { devops_cloud: 1, cybersecurity: 2 } }
   ]},
-  { id: 'q34', category: 'real_world_scenario', prompt: { en: 'You must present project outcomes to school leaders. You lead with:', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q34a', label: { en: 'Before/after user journey improvements.', ar: 'تحسين تجربة المستخدم والواجهة لتصبح أوضح وأسهل.' }, weights: { ui_ux: 3, frontend: 1 } },
-    { id: 'q34b', label: { en: 'System reliability and response-time improvements.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { backend: 2, devops_cloud: 1 } },
-    { id: 'q34c', label: { en: 'Data evidence showing measurable impact.', ar: 'الاعتماد على تحليل البيانات والقياس والتجريب لاتخاذ القرار.' }, weights: { ai_data: 3 } },
-    { id: 'q34d', label: { en: 'Risk reduction and security hardening outcomes.', ar: 'تعزيز الأمان وتقليل المخاطر ومعالجة الثغرات المحتملة.' }, weights: { cybersecurity: 3 } }
+  { id: 'q34', category: 'real_world_scenario', prompt: { en: 'You must present project outcomes to school leaders. You lead with:', ar: 'عليك عرض نتائج المشروع على قيادات المدرسة. بماذا تبدأ؟' }, options: [
+    { id: 'q34a', label: { en: 'Before/after user journey improvements.', ar: 'تحسينات رحلة المستخدم قبل التنفيذ وبعده.' }, weights: { ui_ux: 3, frontend: 1 } },
+    { id: 'q34b', label: { en: 'System reliability and response-time improvements.', ar: 'تحسّن اعتمادية النظام وزمن الاستجابة.' }, weights: { backend: 2, devops_cloud: 1 } },
+    { id: 'q34c', label: { en: 'Data evidence showing measurable impact.', ar: 'أدلة من البيانات تُظهر أثرًا قابلًا للقياس.' }, weights: { ai_data: 3 } },
+    { id: 'q34d', label: { en: 'Risk reduction and security hardening outcomes.', ar: 'نتائج خفض المخاطر وتعزيز التحصين الأمني.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q35', category: 'real_world_scenario', prompt: { en: 'A mobile network outage affects many users. Your first plan is:', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q35a', label: { en: 'Design lightweight screens that degrade gracefully.', ar: 'تحسين تجربة المستخدم والواجهة لتصبح أوضح وأسهل.' }, weights: { frontend: 3, ui_ux: 1 } },
-    { id: 'q35b', label: { en: 'Queue writes and sync once connection returns.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { backend: 3 } },
-    { id: 'q35c', label: { en: 'Adjust infrastructure and monitor recovery metrics.', ar: 'الاعتماد على تحليل البيانات والقياس والتجريب لاتخاذ القرار.' }, weights: { devops_cloud: 3 } },
-    { id: 'q35d', label: { en: 'Ensure offline behavior does not bypass protections.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { cybersecurity: 3 } }
+  { id: 'q35', category: 'real_world_scenario', prompt: { en: 'A mobile network outage affects many users. Your first plan is:', ar: 'انقطاع شبكة الجوال أثّر على عدد كبير من المستخدمين. ما خطتك الأولى؟' }, options: [
+    { id: 'q35a', label: { en: 'Design lightweight screens that degrade gracefully.', ar: 'تصميم شاشات خفيفة تحافظ على تجربة مقبولة عند ضعف الاتصال.' }, weights: { frontend: 3, ui_ux: 1 } },
+    { id: 'q35b', label: { en: 'Queue writes and sync once connection returns.', ar: 'وضع عمليات الكتابة في طابور ثم مزامنتها عند عودة الاتصال.' }, weights: { backend: 3 } },
+    { id: 'q35c', label: { en: 'Adjust infrastructure and monitor recovery metrics.', ar: 'تعديل البنية التحتية ومراقبة مؤشرات التعافي.' }, weights: { devops_cloud: 3 } },
+    { id: 'q35d', label: { en: 'Ensure offline behavior does not bypass protections.', ar: 'ضمان أن وضع Offline لا يتجاوز ضوابط الحماية.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q36', category: 'real_world_scenario', prompt: { en: 'A student startup asks you to choose one quality bar before scaling. You pick:', ar: 'في هذا الموقف، ما الخيار الأنسب من وجهة نظرك؟' }, options: [
-    { id: 'q36a', label: { en: 'Consistent experience across devices and abilities.', ar: 'اختيار عملي يوازن بين الجودة والوضوح وسهولة التنفيذ.' }, weights: { ui_ux: 2, frontend: 2 } },
-    { id: 'q36b', label: { en: 'Stable service contracts and clear data ownership.', ar: 'تحسين منطق Backend وواجهات API وتدفق البيانات.' }, weights: { backend: 3 } },
-    { id: 'q36c', label: { en: 'Reliable monitoring with alert-driven operations.', ar: 'تحسين Cloud وعمليات النشر والاعتمادية تحت الضغط.' }, weights: { devops_cloud: 3 } },
-    { id: 'q36d', label: { en: 'Security-by-default configurations and review gates.', ar: 'تعزيز الأمان وتقليل المخاطر ومعالجة الثغرات المحتملة.' }, weights: { cybersecurity: 3 } }
+  { id: 'q36', category: 'real_world_scenario', prompt: { en: 'A student startup asks you to choose one quality bar before scaling. You pick:', ar: 'شركة ناشئة طلابية طلبت منك اختيار معيار جودة واحد قبل التوسع. ماذا تختار؟' }, options: [
+    { id: 'q36a', label: { en: 'Consistent experience across devices and abilities.', ar: 'تجربة متسقة عبر الأجهزة ولمختلف قدرات المستخدمين.' }, weights: { ui_ux: 2, frontend: 2 } },
+    { id: 'q36b', label: { en: 'Stable service contracts and clear data ownership.', ar: 'عقود خدمات مستقرة وملكية بيانات واضحة.' }, weights: { backend: 3 } },
+    { id: 'q36c', label: { en: 'Reliable monitoring with alert-driven operations.', ar: 'مراقبة موثوقة مع عمليات تشغيل مبنية على التنبيهات.' }, weights: { devops_cloud: 3 } },
+    { id: 'q36d', label: { en: 'Security-by-default configurations and review gates.', ar: 'إعدادات آمنة افتراضيًا مع بوابات مراجعة أمنية.' }, weights: { cybersecurity: 3 } }
   ]}
 ];
