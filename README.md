@@ -20,25 +20,25 @@ npm run dev
 npm run build
 ```
 
-## Sprint 2 summary
+## Sprint 3 summary
 
-Sprint 2 expands the local question bank and introduces balanced quiz selection per attempt while keeping the app frontend-only and deterministic in scoring.
+Sprint 3 improves result clarity and actionability while keeping recommendation language non-diagnostic and student-friendly.
 
-### Sprint 2 behavior
+### Result screen improvements
 
-- Question bank expanded to **36 local scenario-based questions**.
-- Every question now includes a `category` from:
-  - `interest`
-  - `thinking_style`
-  - `problem_solving`
-  - `work_preference`
-  - `learning_style`
-  - `real_world_scenario`
-- Each quiz attempt still asks exactly **12 questions**.
-- Question selection is balanced: every attempt includes at least one question from each category.
-- No duplicate questions are selected within a single attempt.
-- Restart generates a fresh balanced 12-question set.
-- Scoring weights are unchanged in behavior: deterministic for any fixed selected question set + answers.
+- Richer profile content for each track:
+  - short description
+  - why this fit explanation
+  - likely strengths
+  - watch-outs / reality checks
+  - first skills
+  - beginner learning path
+  - mini project
+  - starter topics
+- Primary match card is more visually prominent.
+- Top 3 matches include clearer labels, percentages, and one-line fit reasons.
+- Disclaimer remains explicit: results are guided recommendations, not scientific diagnosis.
+- Restart behavior and deterministic scoring remain unchanged.
 
 Tracks included:
 - frontend
@@ -52,11 +52,16 @@ Tracks included:
 
 1. Open app and confirm start screen appears with disclaimer.
 2. Click **Start Quiz** and verify question 1 loads.
-3. Confirm the quiz contains exactly 12 questions (via progress indicator).
-4. Try clicking next without selecting an option; verify inline validation appears.
-5. Complete all 12 questions and verify the result screen appears.
-6. Confirm primary match and Top 3 matches still appear with percentages.
-7. Confirm disclaimer still states this is guidance, not a scientific diagnosis.
-8. Click **Restart Quiz** and verify a new 12-question attempt starts.
-9. Confirm restart still supports full completion to results.
-10. Check layout on mobile width and verify core flow remains usable.
+3. Complete all 12 questions and verify the result screen appears.
+4. Confirm primary result appears in a dominant card.
+5. Confirm detailed sections appear:
+   - Why this fits
+   - Your likely strengths
+   - Watch out
+   - First skills to learn
+   - Beginner learning path
+   - Mini project to try
+6. Confirm top 3 matches appear with percentages.
+7. Confirm recommendation disclaimer appears and is non-diagnostic.
+8. Click **Restart Quiz** and verify a new quiz attempt starts.
+9. Confirm full flow remains usable at mobile width.

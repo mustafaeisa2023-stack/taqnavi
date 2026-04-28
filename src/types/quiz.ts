@@ -17,11 +17,14 @@ export type QuestionCategory =
 export type TrackProfile = {
   id: TrackId;
   title: string;
-  description: string;
-  whyFit: string;
+  shortDescription: string;
+  whyItFits: string;
   strengths: string[];
+  watchOut: string[];
   firstSkills: string[];
+  learningPath: string[];
   miniProject: string;
+  starterTopics: string[];
 };
 
 export type AnswerOption = {
