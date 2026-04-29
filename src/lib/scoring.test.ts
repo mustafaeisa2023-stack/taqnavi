@@ -12,6 +12,7 @@ describe('scoring', () => {
 
   it('applies priority tie-breaking when scores are equal', () => {
     const ranked = rankTracks({
+      software_engineer: 5,
       frontend: 5,
       backend: 5,
       ai_data: 5,
@@ -20,8 +21,8 @@ describe('scoring', () => {
       ui_ux: 5
     });
 
-    expect(ranked[0].id).toBe('frontend');
-    expect(ranked[1].id).toBe('backend');
-    expect(ranked[5].id).toBe('ui_ux');
+    expect(ranked[0].id).toBe('software_engineer');
+    expect(ranked[1].id).toBe('frontend');
+    expect(ranked[6].id).toBe('ui_ux');
   });
 });
