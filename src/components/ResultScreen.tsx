@@ -4,6 +4,7 @@ import { useLanguage } from '../LanguageContext';
 import { UI_TEXT } from '../i18n';
 import { LanguageToggle } from './LanguageToggle';
 import { ThemeToggle } from './ThemeToggle';
+import { useTheme } from '../ThemeContext';
 
 type ResultScreenProps = { result: QuizResult; onRestart: () => void; };
 
@@ -11,9 +12,12 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
   const { primary, top3 } = result;
   const { lang } = useLanguage();
   const t = UI_TEXT[lang];
+  const { theme } = useTheme();
+  const logoSrc = theme === 'dark' ? '/brand/technavi-logo-dark.svg' : '/brand/technavi-logo-light.svg';
   return (
     <section className="card result-layout">
       <div className="toolbar"><LanguageToggle /><ThemeToggle /></div>
+      <img src={logoSrc} alt={t.logoAlt} className="brand-logo brand-logo-inline" />
       <article className="primary-match"><p className="chip">{t.primaryMatch}</p><h2>{primary.title[lang]}</h2><p className="lead">{primary.shortDescription[lang]}</p></article>
       <section className="content-card"><h3>{t.whyFits}</h3><p>{primary.whyItFits[lang]}</p></section>
       <section className="content-card"><h3>{t.strengths}</h3><ul>{primary.strengths[lang].map((s) => <li key={s}>{s}</li>)}</ul></section>
@@ -25,6 +29,7 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
       <section className="content-card top3-section"><h3>{t.top3}</h3><div className="top3">{top3.map((entry, i) => <ResultCard key={entry.track.id} rank={i + 1} title={entry.track.title[lang]} percentage={entry.percentage} reason={entry.track.whyItFits[lang]} />)}</div></section>
       <p className="disclaimer">{t.disclaimer}</p>
       <button className="primary restart" type="button" onClick={onRestart}>{t.restart}</button>
+      <p className="credit">{t.credit}</p>
     </section>
   );
 }
