@@ -1,22 +1,27 @@
+import { useMemo } from 'react';
 import { ProgressBar } from './ProgressBar';
 import type { Question } from '../types/quiz';
 import { useLanguage } from '../LanguageContext';
 import { UI_TEXT } from '../i18n';
 import { LanguageToggle } from './LanguageToggle';
+import { ThemeToggle } from './ThemeToggle';
+import { orderOptions } from '../lib/optionOrder';
 
-type QuizScreenProps = { question: Question; index: number; total: number; selectedOptionId?: string; onSelect: (optionId: string) => void; onNext: () => void; error?: string; };
-export function QuizScreen({ question, index, total, selectedOptionId, onSelect, onNext, error }: QuizScreenProps) {
+type QuizScreenProps = { question: Question; index: number; total: number; selectedOptionId?: string; onSelect: (optionId: string) => void; onNext: () => void; error?: string; sessionSeed: string; };
+export function QuizScreen({ question, index, total, selectedOptionId, onSelect, onNext, error, sessionSeed }: QuizScreenProps) {
   const isLast = index === total - 1;
   const hasSelection = Boolean(selectedOptionId);
   const { lang } = useLanguage();
   const t = UI_TEXT[lang];
+  const orderedOptions = useMemo(() => orderOptions(question.options, `${sessionSeed}:${question.id}`), [question.id, question.options, sessionSeed]);
+
   return (
     <section className="card quiz-screen">
-      <LanguageToggle />
+      <div className="toolbar"><LanguageToggle /><ThemeToggle /></div>
       <ProgressBar current={index + 1} total={total} />
       <h2 className="question-title">{question.prompt[lang]}</h2>
       <div className="options" role="radiogroup" aria-label={`${t.questionOf(index + 1, total)}`}>
-        {question.options.map((option) => <button key={option.id} type="button" className={`option ${selectedOptionId === option.id ? 'selected' : ''}`} aria-pressed={selectedOptionId === option.id} onClick={() => onSelect(option.id)}>{option.label[lang]}</button>)}
+        {orderedOptions.map((option) => <button key={option.id} type="button" className={`option ${selectedOptionId === option.id ? 'selected' : ''}`} aria-pressed={selectedOptionId === option.id} onClick={() => onSelect(option.id)}>{option.label[lang]}</button>)}
       </div>
       {error && <p className="error" role="alert">{error}</p>}
       <button className="primary" type="button" onClick={onNext} disabled={!hasSelection}>{isLast ? t.seeResult : t.nextQuestion}</button>

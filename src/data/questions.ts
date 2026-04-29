@@ -1,19 +1,19 @@
 import type { Question } from '../types/quiz';
 
 export const QUESTIONS: Question[] = [
-  { id: 'q1', category: 'interest', prompt: { en: 'A student app has unclear navigation. What part would you most want to improve first?', ar: 'تطبيق طلابي فيه تنقّل غير واضح. أي جزء ترغب بتحسينه أولًا؟' }, options: [
+  { id: 'q1', category: 'interest', prompt: { en: 'Your student club app confuses new members during onboarding. What would you improve first?', ar: 'تطبيق ناديك الطلابي يربك الأعضاء الجدد أثناء التسجيل. ما أول جانب تحسّنه؟' }, options: [
     { id: 'q1a', label: { en: 'The screen flow so key actions feel obvious.', ar: 'انسيابية الشاشات بحيث تصبح الإجراءات الأساسية واضحة فورًا.' }, weights: { ui_ux: 3, frontend: 1 } },
     { id: 'q1b', label: { en: 'The API structure so each screen gets cleaner data.', ar: 'هيكلة الـ API حتى تحصل كل شاشة على بيانات أوضح وأنظف.' }, weights: { backend: 3 } },
     { id: 'q1c', label: { en: 'The analytics events so we can measure user confusion.', ar: 'أحداث التحليلات (Analytics Events) حتى نقيس مواضع ارتباك المستخدم.' }, weights: { ai_data: 3, frontend: 1 } },
     { id: 'q1d', label: { en: 'The access rules so only trusted users can reach sensitive pages.', ar: 'قواعد الوصول بحيث لا يصل للصفحات الحساسة إلا المستخدمون الموثوقون.' }, weights: { cybersecurity: 3, backend: 1 } }
   ]},
-  { id: 'q2', category: 'interest', prompt: { en: 'Your club website crashes during registrations. Which task sounds most exciting?', ar: 'موقع النادي يتعطّل أثناء التسجيل. أي مهمة تبدو لك الأكثر حماسًا؟' }, options: [
+  { id: 'q2', category: 'interest', prompt: { en: 'Registration opens for a campus event and the site starts failing. Which task do you pick first?', ar: 'عند فتح التسجيل لفعالية جامعية بدأ الموقع بالتعطّل. أي مهمة تختارها أولًا؟' }, options: [
     { id: 'q2a', label: { en: 'Build responsive status pages to keep students informed.', ar: 'بناء صفحات حالة متجاوبة لإبقاء الطلاب على اطلاع دائم.' }, weights: { frontend: 3, ui_ux: 1 } },
     { id: 'q2b', label: { en: 'Fix slow queries and refactor signup endpoints.', ar: 'إصلاح الاستعلامات البطيئة وإعادة هيكلة نقاط تسجيل الاشتراك.' }, weights: { backend: 3, devops_cloud: 1 } },
     { id: 'q2c', label: { en: 'Set autoscaling and alerts so traffic spikes are handled.', ar: 'إعداد Autoscaling والتنبيهات للتعامل مع ارتفاع الزيارات.' }, weights: { devops_cloud: 3, backend: 1 } },
     { id: 'q2d', label: { en: 'Review rate limits and abuse patterns.', ar: 'مراجعة حدود المعدّل (Rate Limits) وأنماط إساءة الاستخدام.' }, weights: { cybersecurity: 3, devops_cloud: 1 } }
   ]},
-  { id: 'q3', category: 'interest', prompt: { en: 'A teacher offers four mini-project choices. Which do you pick?', ar: 'مدرّس طرح أربعة مشاريع صغيرة. أي مشروع تختار؟' }, options: [
+  { id: 'q3', category: 'interest', prompt: { en: 'In a course lab, you can choose one mini-project track. Which one attracts you most?', ar: 'في معمل مادة جامعية يمكنك اختيار مسار مشروع صغير واحد. أي مسار يجذبك أكثر؟' }, options: [
     { id: 'q3a', label: { en: 'Interactive dashboard with clear visuals.', ar: 'لوحة تفاعلية برسوم واضحة وسهلة الفهم.' }, weights: { frontend: 2, ui_ux: 2 } },
     { id: 'q3b', label: { en: 'Recommendation model from open student data.', ar: 'نموذج توصية مبني على بيانات طلابية مفتوحة.' }, weights: { ai_data: 3, backend: 1 } },
     { id: 'q3c', label: { en: 'Secure login monitor that detects anomalies.', ar: 'مراقب تسجيل دخول آمن يكتشف السلوك الشاذ.' }, weights: { cybersecurity: 3, ai_data: 1 } },
@@ -31,7 +31,7 @@ export const QUESTIONS: Question[] = [
     { id: 'q5c', label: { en: 'The data reveals insights that guide better decisions.', ar: 'أن تكشف البيانات عن رؤى تقود لقرارات أفضل.' }, weights: { ai_data: 3 } },
     { id: 'q5d', label: { en: 'The system stays trustworthy against common attacks.', ar: 'أن يبقى النظام موثوقًا أمام الهجمات الشائعة.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q6', category: 'interest', prompt: { en: 'You have two free evenings to explore tech. What do you choose?', ar: 'لديك أمسيتان فارغتان لاستكشاف التقنية. ماذا تختار؟' }, options: [
+  { id: 'q6', category: 'interest', prompt: { en: 'You have two free evenings before exams and want practical learning. What do you build?', ar: 'لديك أمسيتان قبل الاختبارات وتريد تعلّمًا عمليًا. ماذا تبني؟' }, options: [
     { id: 'q6a', label: { en: 'Rebuild a favorite app screen with accessibility improvements.', ar: 'إعادة بناء شاشة مفضلة مع تحسينات في سهولة الوصول.' }, weights: { frontend: 3, ui_ux: 1 } },
     { id: 'q6b', label: { en: 'Build a REST API and test edge cases.', ar: 'بناء REST API واختبار الحالات الطرفية.' }, weights: { backend: 3 } },
     { id: 'q6c', label: { en: 'Clean a dataset and compare simple prediction models.', ar: 'تنظيف مجموعة بيانات ومقارنة نماذج تنبؤ بسيطة.' }, weights: { ai_data: 3 } },

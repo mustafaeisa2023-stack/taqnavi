@@ -105,3 +105,33 @@ Sprint 4.5 adds bilingual localization (English/Arabic) and branding while keepi
 15. Confirm Restart still works.
 16. Confirm logo appears correctly and is not distorted.
 17. Test on mobile width.
+
+## Sprint 4.6 summary
+
+Sprint 4.6 improves quiz quality and adds visual theme mode while preserving frontend-only architecture and existing scoring/selection logic.
+
+### What changed
+
+- Improved quiz consistency with stronger scenario framing and stable option randomization per quiz attempt.
+- Added stable per-session answer option ordering to reduce predictable answer patterns while preserving option ids and weights.
+- Added dark/light mode with persistent preference in `localStorage` (`taqnavi_theme`).
+- Added theme toggle across start, quiz, and result screens.
+- Preserved RTL/LTR behavior with Arabic/English language switching.
+- Extended question data tests to enforce exactly 4 options per question and non-empty weights.
+
+## Sprint 4.6 manual QA checklist
+
+1. Open app in dark theme.
+2. Switch to light theme.
+3. Switch back to dark theme.
+4. Confirm theme persists after refresh.
+5. Test Arabic in dark theme.
+6. Test Arabic in light theme.
+7. Test English in dark theme.
+8. Test English in light theme.
+9. Complete quiz in Arabic.
+10. Complete quiz in English.
+11. Confirm result page works in both themes.
+12. Confirm answer order is not obviously repetitive.
+13. Confirm questions are clear for early university students.
+14. Confirm build/test pass.

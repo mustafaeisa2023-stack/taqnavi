@@ -1,6 +1,7 @@
 import { useLanguage } from '../LanguageContext';
 import { UI_TEXT } from '../i18n';
 import { LanguageToggle } from './LanguageToggle';
+import { ThemeToggle } from './ThemeToggle';
 
 type StartScreenProps = { onStart: () => void };
 
@@ -9,7 +10,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
   const t = UI_TEXT[lang];
   return (
     <section className="card center start-screen">
-      <LanguageToggle />
+      <div className="toolbar"><LanguageToggle /><ThemeToggle /></div>
       <img src="/brand/taqnavi-logo.svg" alt={t.logoAlt} className="brand-logo" />
       <p className="eyebrow">{t.booth}</p>
       <h1 className="hero-title">{t.heroTitle}</h1>
