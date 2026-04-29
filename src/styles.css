@@ -65,8 +65,37 @@ h2 { font-size: clamp(1.25rem, 3vw, 1.8rem); }
 .info-strip { text-align: left; margin: 0 auto 20px; max-width: 680px; padding: 14px; border-radius: 14px; background: var(--strip); border: 1px solid var(--strip-border); }
 .info-strip p { margin: 0; color: var(--muted); }
 .disclaimer { color: var(--muted); font-size: .94rem; margin: 16px 0 0; }
-.primary { width: 100%; border: 0; border-radius: 12px; padding: 14px 20px; background: linear-gradient(90deg, #14b8ff, #22d3ee); color: #052034; font-weight: 800; font-size: 1.02rem; cursor: pointer; }
-.option { text-align: left; width: 100%; border: 1px solid var(--option-border); background: var(--option); color: var(--text); padding: 15px; border-radius: 12px; font-size: 1rem; cursor: pointer; }
+.primary {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  padding: 14px 20px;
+  background: linear-gradient(90deg, #14b8ff, #22d3ee);
+  color: #052034;
+  font-weight: 800;
+  font-size: 1.02rem;
+  cursor: pointer;
+  transition: transform 140ms ease, filter 140ms ease, box-shadow 140ms ease;
+  box-shadow: 0 8px 18px rgb(20 184 255 / 24%);
+}
+.primary:hover:not(:disabled) { filter: brightness(1.03); box-shadow: 0 10px 20px rgb(20 184 255 / 28%); }
+.primary:active:not(:disabled) { transform: translateY(1px) scale(0.994); filter: brightness(0.97); box-shadow: 0 5px 12px rgb(20 184 255 / 22%); }
+.primary:disabled { cursor: not-allowed; filter: saturate(0.75); box-shadow: none; }
+
+.option {
+  text-align: left;
+  width: 100%;
+  border: 1px solid var(--option-border);
+  background: var(--option);
+  color: var(--text);
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease, box-shadow 120ms ease;
+}
+.option:hover { filter: brightness(1.02); }
+.option:active { transform: scale(0.997); filter: brightness(0.98); }
 .option.selected { border-color: #2ce1ff; box-shadow: inset 0 0 0 1px #7cecff; }
 .options { display: grid; gap: 12px; margin: 16px 0 18px; }
 .progress-wrap { margin-bottom: 18px; }

@@ -24,7 +24,9 @@ export function QuizScreen({ question, index, total, selectedOptionId, onSelect,
         {orderedOptions.map((option) => <button key={option.id} type="button" className={`option ${selectedOptionId === option.id ? 'selected' : ''}`} aria-pressed={selectedOptionId === option.id} onClick={() => onSelect(option.id)}>{option.label[lang]}</button>)}
       </div>
       {error && <p className="error" role="alert">{error}</p>}
-      <button className="primary" type="button" onClick={onNext} disabled={!hasSelection}>{isLast ? t.seeResult : t.nextQuestion}</button>
+      <button className="primary" type="button" onClick={onNext} disabled={!hasSelection}>
+        {isLast ? (hasSelection ? t.seeResult : t.chooseAnswerToSeeResult) : t.nextQuestion}
+      </button>
     </section>
   );
 }
