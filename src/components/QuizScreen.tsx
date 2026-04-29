@@ -5,6 +5,7 @@ import { useLanguage } from '../LanguageContext';
 import { UI_TEXT } from '../i18n';
 import { LanguageToggle } from './LanguageToggle';
 import { ThemeToggle } from './ThemeToggle';
+import { useTheme } from '../ThemeContext';
 import { orderOptions } from '../lib/optionOrder';
 
 type QuizScreenProps = { question: Question; index: number; total: number; selectedOptionId?: string; onSelect: (optionId: string) => void; onNext: () => void; error?: string; sessionSeed: string; };
@@ -13,11 +14,14 @@ export function QuizScreen({ question, index, total, selectedOptionId, onSelect,
   const hasSelection = Boolean(selectedOptionId);
   const { lang } = useLanguage();
   const t = UI_TEXT[lang];
+  const { theme } = useTheme();
+  const logoSrc = theme === 'dark' ? '/brand/technavi-logo-dark.svg' : '/brand/technavi-logo-light.svg';
   const orderedOptions = useMemo(() => orderOptions(question.options, `${sessionSeed}:${question.id}`), [question.id, question.options, sessionSeed]);
 
   return (
     <section className="card quiz-screen">
       <div className="toolbar"><LanguageToggle /><ThemeToggle /></div>
+      <img src={logoSrc} alt={t.logoAlt} className="brand-logo brand-logo-inline" />
       <ProgressBar current={index + 1} total={total} />
       <h2 className="question-title">{question.prompt[lang]}</h2>
       <div className="options" role="radiogroup" aria-label={`${t.questionOf(index + 1, total)}`}>
@@ -27,6 +31,7 @@ export function QuizScreen({ question, index, total, selectedOptionId, onSelect,
       <button className="primary" type="button" onClick={onNext} disabled={!hasSelection}>
         {isLast ? (hasSelection ? t.seeResult : t.chooseAnswerToSeeResult) : t.nextQuestion}
       </button>
+      <p className="credit">{t.credit}</p>
     </section>
   );
 }
