@@ -6,7 +6,7 @@ export const UI_TEXT = {
   en: {
     chooseAnswer: 'Please choose one answer before continuing.',
     questionOf: (c:number,t:number)=>`Question ${c} of ${t}`,
-    complete: (p:number)=>`${p}% Complete`,
+    complete: (p:number)=>`Complete ${p}%`,
     seeResult: 'See Result',
     chooseAnswerToSeeResult: 'Choose an answer to see your result',
     nextQuestion: 'Next Question',
