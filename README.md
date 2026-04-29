@@ -60,3 +60,48 @@ Sprint 4 focuses on booth-ready UI/UX polish while preserving the frontend-only 
 10. Click **Restart Quiz** and verify a new attempt starts quickly.
 11. Confirm layout is readable at desktop/laptop width.
 12. Confirm layout remains readable and usable at mobile width.
+
+## Sprint 4.5 summary
+
+Sprint 4.5 adds bilingual localization (English/Arabic) and branding while keeping the frontend-only architecture, deterministic weighted scoring, balanced question selection, and result experience.
+
+### Bilingual support notes
+
+- Added a lightweight dictionary-based localization layer (no heavy i18n dependency).
+- Added a language switcher (EN / العربية) visible on start, quiz, and result screens.
+- Language switch updates UI labels, buttons, progress copy, results labels, Top 3 section labels, and disclaimers.
+- Language preference persists in `localStorage` under `taqnavi_lang`.
+- App directionality switches automatically:
+  - `dir="ltr"` for English
+  - `dir="rtl"` for Arabic
+
+### Language switch behavior
+
+- Default language is English when no saved preference exists.
+- Switching language is available at any point in the flow.
+- Restart behavior and scoring remain unchanged.
+
+### Logo asset location
+
+- SVG logo is served from: `public/brand/taqnavi-logo.svg`
+- The logo is displayed on the landing screen with meaningful alt text.
+
+## Sprint 4.5 manual test checklist
+
+1. Open app in English.
+2. Start quiz in English.
+3. Complete quiz in English.
+4. Confirm English result page is complete.
+5. Switch to Arabic.
+6. Confirm layout becomes RTL.
+7. Confirm landing page is Arabic.
+8. Confirm quiz questions and answers are Arabic.
+9. Complete quiz in Arabic.
+10. Confirm Arabic result page is complete.
+11. Confirm Top 3 matches appear in Arabic mode.
+12. Confirm disclaimer appears in Arabic mode.
+13. Switch back to English.
+14. Confirm layout returns to LTR.
+15. Confirm Restart still works.
+16. Confirm logo appears correctly and is not distorted.
+17. Test on mobile width.

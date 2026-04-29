@@ -1,74 +1,29 @@
 import type { QuizResult } from '../types/quiz';
 import { ResultCard } from './ResultCard';
+import { useLanguage } from '../LanguageContext';
+import { UI_TEXT } from '../i18n';
+import { LanguageToggle } from './LanguageToggle';
 
-type ResultScreenProps = {
-  result: QuizResult;
-  onRestart: () => void;
-};
+type ResultScreenProps = { result: QuizResult; onRestart: () => void; };
 
 export function ResultScreen({ result, onRestart }: ResultScreenProps) {
   const { primary, top3 } = result;
-
+  const { lang } = useLanguage();
+  const t = UI_TEXT[lang];
   return (
     <section className="card result-layout">
-      <article className="primary-match">
-        <p className="chip">Primary Match</p>
-        <h2>{primary.title}</h2>
-        <p className="lead">{primary.shortDescription}</p>
-      </article>
-
-      <section className="content-card">
-        <h3>Why this fits</h3>
-        <p>{primary.whyItFits}</p>
-      </section>
-
-      <section className="content-card">
-        <h3>Your likely strengths</h3>
-        <ul>{primary.strengths.map((s) => <li key={s}>{s}</li>)}</ul>
-      </section>
-
-      <section className="content-card">
-        <h3>Watch out</h3>
-        <ul>{primary.watchOut.map((item) => <li key={item}>{item}</li>)}</ul>
-      </section>
-
-      <section className="content-card">
-        <h3>First skills to learn</h3>
-        <ul>{primary.firstSkills.map((s) => <li key={s}>{s}</li>)}</ul>
-      </section>
-
-      <section className="content-card">
-        <h3>Beginner learning path</h3>
-        <ol className="path-list">{primary.learningPath.map((step) => <li key={step}>{step}</li>)}</ol>
-      </section>
-
-      <section className="content-card">
-        <h3>Mini project to try</h3>
-        <p>{primary.miniProject}</p>
-      </section>
-
-      <section className="content-card">
-        <h3>Starter topics</h3>
-        <ul>{primary.starterTopics.map((topic) => <li key={topic}>{topic}</li>)}</ul>
-      </section>
-
-      <section className="content-card top3-section">
-        <h3>Your top 3 matches</h3>
-        <div className="top3">
-          {top3.map((entry, i) => (
-            <ResultCard
-              key={entry.track.id}
-              rank={i + 1}
-              title={entry.track.title}
-              percentage={entry.percentage}
-              reason={entry.track.whyItFits}
-            />
-          ))}
-        </div>
-      </section>
-
-      <p className="disclaimer">This result is a guided recommendation based on your answers. It is not a scientific diagnosis or a psychometric assessment.</p>
-      <button className="primary restart" type="button" onClick={onRestart}>Restart Quiz</button>
+      <LanguageToggle />
+      <article className="primary-match"><p className="chip">{t.primaryMatch}</p><h2>{primary.title[lang]}</h2><p className="lead">{primary.shortDescription[lang]}</p></article>
+      <section className="content-card"><h3>{t.whyFits}</h3><p>{primary.whyItFits[lang]}</p></section>
+      <section className="content-card"><h3>{t.strengths}</h3><ul>{primary.strengths[lang].map((s) => <li key={s}>{s}</li>)}</ul></section>
+      <section className="content-card"><h3>{t.watchOut}</h3><ul>{primary.watchOut[lang].map((item) => <li key={item}>{item}</li>)}</ul></section>
+      <section className="content-card"><h3>{t.firstSkills}</h3><ul>{primary.firstSkills[lang].map((s) => <li key={s}>{s}</li>)}</ul></section>
+      <section className="content-card"><h3>{t.learningPath}</h3><ol className="path-list">{primary.learningPath[lang].map((step) => <li key={step}>{step}</li>)}</ol></section>
+      <section className="content-card"><h3>{t.miniProject}</h3><p>{primary.miniProject[lang]}</p></section>
+      <section className="content-card"><h3>{t.starterTopics}</h3><ul>{primary.starterTopics[lang].map((topic) => <li key={topic}>{topic}</li>)}</ul></section>
+      <section className="content-card top3-section"><h3>{t.top3}</h3><div className="top3">{top3.map((entry, i) => <ResultCard key={entry.track.id} rank={i + 1} title={entry.track.title[lang]} percentage={entry.percentage} reason={entry.track.whyItFits[lang]} />)}</div></section>
+      <p className="disclaimer">{t.disclaimer}</p>
+      <button className="primary restart" type="button" onClick={onRestart}>{t.restart}</button>
     </section>
   );
 }

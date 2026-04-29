@@ -6,6 +6,16 @@ export type TrackId =
   | 'devops_cloud'
   | 'ui_ux';
 
+export type LocalizedText = {
+  en: string;
+  ar: string;
+};
+
+export type LocalizedTextList = {
+  en: string[];
+  ar: string[];
+};
+
 export type QuestionCategory =
   | 'interest'
   | 'thinking_style'
@@ -16,26 +26,26 @@ export type QuestionCategory =
 
 export type TrackProfile = {
   id: TrackId;
-  title: string;
-  shortDescription: string;
-  whyItFits: string;
-  strengths: string[];
-  watchOut: string[];
-  firstSkills: string[];
-  learningPath: string[];
-  miniProject: string;
-  starterTopics: string[];
+  title: LocalizedText;
+  shortDescription: LocalizedText;
+  whyItFits: LocalizedText;
+  strengths: LocalizedTextList;
+  watchOut: LocalizedTextList;
+  firstSkills: LocalizedTextList;
+  learningPath: LocalizedTextList;
+  miniProject: LocalizedText;
+  starterTopics: LocalizedTextList;
 };
 
 export type AnswerOption = {
   id: string;
-  label: string;
+  label: LocalizedText;
   weights: Partial<Record<TrackId, number>>;
 };
 
 export type Question = {
   id: string;
-  prompt: string;
+  prompt: LocalizedText;
   category: QuestionCategory;
   options: AnswerOption[];
 };
