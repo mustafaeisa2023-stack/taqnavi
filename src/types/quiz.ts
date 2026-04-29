@@ -1,4 +1,5 @@
 export type TrackId =
+  | 'software_engineer'
   | 'frontend'
   | 'backend'
   | 'ai_data'
