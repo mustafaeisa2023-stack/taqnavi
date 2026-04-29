@@ -2,6 +2,7 @@ import { TRACK_PROFILES } from '../data/tracks';
 import type { Question, QuizResult, ScoreMap, TrackId } from '../types/quiz';
 
 export const TRACK_PRIORITY: TrackId[] = [
+  'software_engineer',
   'frontend',
   'backend',
   'ai_data',
