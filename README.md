@@ -1,137 +1,143 @@
 # Taqnavi
 
-Taqnavi is a frontend-only interactive quiz that gives students a guided recommendation for tech career paths based on scenario-based answers.
+Taqnavi is a frontend-only quiz web app that helps university students explore suitable technology career tracks through short scenario-based questions in English and Arabic.
 
-## Install dependencies
+## Architecture (Frontend-Only)
+
+- **Static frontend only**: no backend server, no database, and no external API calls.
+- Quiz content, scoring, and track profiles are bundled in the app code.
+- Language and theme preferences are saved locally in the browser (`localStorage`).
+
+## Tech Stack
+
+- React 18
+- TypeScript
+- Vite 5
+- Vitest
+- CSS (single stylesheet)
+
+## Getting Started
+
+### Install
 
 ```bash
 npm install
 ```
 
-## Run locally
+### Run development server
 
 ```bash
 npm run dev
 ```
 
-## Build for production
+### Build for production
 
 ```bash
 npm run build
 ```
 
-## Sprint 4 summary
+### Run tests
 
-Sprint 4 focuses on booth-ready UI/UX polish while preserving the frontend-only architecture, question-selection behavior, and scoring logic.
+```bash
+npm run test
+```
 
-### UI/UX improvements
+### Preview production build locally
 
-- Refined landing screen with stronger value proposition, clearer quiz purpose, and a more dominant Start Quiz CTA.
-- Improved quiz readability and interaction flow:
-  - clearer progress indicators
-  - larger touch-friendly answer cards
-  - stronger selected-state visibility
-  - disabled Next button until an answer is selected
-- Restructured result experience into clearer visual blocks/cards:
-  - Why this fits
-  - Your likely strengths
-  - Watch out
-  - First skills to learn
-  - Beginner learning path
-  - Mini project to try
-  - Starter topics
-  - Top 3 matches
-- Upgraded Top 3 layout for faster scanning with rank badges and stronger match emphasis.
-- Added subtle hover/focus transitions and visible focus outlines for accessibility.
-- Improved spacing, typography hierarchy, contrast, and mobile responsiveness.
-- Maintained explicit non-diagnostic recommendation language.
+```bash
+npm run preview
+```
 
-## Manual test checklist
+## Deployment Notes
 
-1. Open app and confirm the landing screen shows clear purpose, duration, and disclaimer.
-2. Click **Start Quiz** and verify question 1 loads.
-3. Select answers and confirm selected cards are visually distinct.
-4. Confirm progress (question count and percentage) is clearly visible.
-5. Verify **Next Question** / **See Result** is disabled until an answer is selected.
-6. Complete all questions and verify the result screen appears.
-7. Confirm result sections are readable and organized into separate cards/blocks.
-8. Confirm **Top 3 matches** are clearly visible and easy to scan.
-9. Confirm disclaimer appears on the result screen.
-10. Click **Restart Quiz** and verify a new attempt starts quickly.
-11. Confirm layout is readable at desktop/laptop width.
-12. Confirm layout remains readable and usable at mobile width.
+Taqnavi is designed to be deployed as a static site.
 
-## Sprint 4.5 summary
+- Build command: `npm run build`
+- Output directory: `dist`
+- Environment variables: **none required**
+- No backend services are needed.
 
-Sprint 4.5 adds bilingual localization (English/Arabic) and branding while keeping the frontend-only architecture, deterministic weighted scoring, balanced question selection, and result experience.
+### Vercel / Static Hosting Notes
 
-### Bilingual support notes
+You can deploy to:
 
-- Added a lightweight dictionary-based localization layer (no heavy i18n dependency).
-- Added a language switcher (EN / العربية) visible on start, quiz, and result screens.
-- Language switch updates UI labels, buttons, progress copy, results labels, Top 3 section labels, and disclaimers.
-- Language preference persists in `localStorage` under `taqnavi_lang`.
-- App directionality switches automatically:
-  - `dir="ltr"` for English
-  - `dir="rtl"` for Arabic
+- **Vercel** (recommended for easiest GitHub integration)
+- **Any static host** (Netlify, GitHub Pages, Cloudflare Pages, university hosting, nginx static folder, etc.)
 
-### Language switch behavior
+Vercel defaults are enough:
 
-- Default language is English when no saved preference exists.
-- Switching language is available at any point in the flow.
-- Restart behavior and scoring remain unchanged.
+- Framework preset: Vite
+- Build command: `npm run build`
+- Output directory: `dist`
 
-### Logo asset location
+For detailed steps, see [`docs/deployment.md`](docs/deployment.md).
 
-- SVG logo is served from: `public/brand/taqnavi-logo.svg`
-- The logo is displayed on the landing screen with meaningful alt text.
+## Product Behavior Notes
 
-## Sprint 4.5 manual test checklist
+### Bilingual support (English / Arabic)
 
-1. Open app in English.
-2. Start quiz in English.
-3. Complete quiz in English.
-4. Confirm English result page is complete.
-5. Switch to Arabic.
-6. Confirm layout becomes RTL.
-7. Confirm landing page is Arabic.
-8. Confirm quiz questions and answers are Arabic.
-9. Complete quiz in Arabic.
-10. Confirm Arabic result page is complete.
-11. Confirm Top 3 matches appear in Arabic mode.
-12. Confirm disclaimer appears in Arabic mode.
-13. Switch back to English.
-14. Confirm layout returns to LTR.
-15. Confirm Restart still works.
-16. Confirm logo appears correctly and is not distorted.
-17. Test on mobile width.
+- Language can be switched at any point in the app.
+- Arabic uses RTL direction; English uses LTR direction.
+- Language choice persists between refreshes.
 
-## Sprint 4.6 summary
+### Light / Dark theme
 
-Sprint 4.6 improves quiz quality and adds visual theme mode while preserving frontend-only architecture and existing scoring/selection logic.
+- Theme can be toggled at any point in the app.
+- Theme preference persists between refreshes.
 
-### What changed
+## Event / Booth Readiness Checklist (Quick)
 
-- Improved quiz consistency with stronger scenario framing and stable option randomization per quiz attempt.
-- Added stable per-session answer option ordering to reduce predictable answer patterns while preserving option ids and weights.
-- Added dark/light mode with persistent preference in `localStorage` (`taqnavi_theme`).
-- Added theme toggle across start, quiz, and result screens.
-- Preserved RTL/LTR behavior with Arabic/English language switching.
-- Extended question data tests to enforce exactly 4 options per question and non-empty weights.
+Before booth usage:
 
-## Sprint 4.6 manual QA checklist
+- [ ] Build succeeds locally (`npm run build`)
+- [ ] Tests pass (`npm run test`)
+- [ ] Deploy latest tested commit
+- [ ] Open deployed URL in booth browser
+- [ ] Verify English and Arabic flows
+- [ ] Verify RTL/LTR switch behavior
+- [ ] Verify light/dark theme toggle
+- [ ] Verify final result + Top 3 display
+- [ ] Verify restart behavior
+- [ ] Print/test QR code on phones
+- [ ] Keep a local fallback build ready
 
-1. Open app in dark theme.
-2. Switch to light theme.
-3. Switch back to dark theme.
-4. Confirm theme persists after refresh.
-5. Test Arabic in dark theme.
-6. Test Arabic in light theme.
-7. Test English in dark theme.
-8. Test English in light theme.
-9. Complete quiz in Arabic.
-10. Complete quiz in English.
-11. Confirm result page works in both themes.
-12. Confirm answer order is not obviously repetitive.
-13. Confirm questions are clear for early university students.
-14. Confirm build/test pass.
+For full checklists, see:
+
+- [`docs/event-readiness.md`](docs/event-readiness.md)
+- [`docs/manual-qa.md`](docs/manual-qa.md)
+
+## Manual QA Checklist
+
+Use the complete checklist in [`docs/manual-qa.md`](docs/manual-qa.md) before any live student event.
+
+## How to Update Quiz Questions After Deployment
+
+1. Edit question content in `src/data/questions.ts`.
+2. Keep the existing data structure (ids, options, weights format) intact.
+3. Run:
+   - `npm run test`
+   - `npm run build`
+4. Commit and deploy the updated build.
+5. Re-run manual QA from [`docs/manual-qa.md`](docs/manual-qa.md).
+
+## Guardrails: What Must NOT Be Added Without a New Architecture Decision
+
+Do **not** add the following to this project unless the team explicitly approves a new architecture direction:
+
+- Backend service
+- Database
+- Login/authentication
+- AI API integration
+- Firebase/Supabase
+- Analytics SDKs
+- Admin dashboard
+- PDF export/share features
+- Routing library migration
+- Heavy dependencies that increase bundle complexity
+- Complex deployment automation beyond static hosting needs
+
+## Additional Documentation
+
+- Deployment guide: [`docs/deployment.md`](docs/deployment.md)
+- Event readiness guide: [`docs/event-readiness.md`](docs/event-readiness.md)
+- Manual QA checklist: [`docs/manual-qa.md`](docs/manual-qa.md)
