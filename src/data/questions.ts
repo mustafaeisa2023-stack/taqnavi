@@ -149,77 +149,77 @@ export const QUESTIONS: Question[] = [
     { id: 'q24d', label: { en: 'Rules that keep private student details protected from the start.', ar: 'قواعد تحمي بيانات الطلاب الخاصة من البداية.' }, weights: { cybersecurity: 3 } }
   ]},
 
-  { id: 'q25', category: 'learning_style', prompt: { en: 'Which learning resource helps you improve fastest?', ar: 'أي مورد تعلّم يساعدك على التطور بأسرع شكل؟' }, options: [
-    { id: 'q25a', label: { en: 'Interactive UI teardown videos and design critiques.', ar: 'فيديوهات تفكيك UI بشكل تفاعلي مع نقد للتصميم.' }, weights: { frontend: 2, ui_ux: 2 } },
-    { id: 'q25b', label: { en: 'Backend system design walkthroughs with code labs.', ar: 'شروحات معمارية Backend مع تمارين عملية على الكود.' }, weights: { backend: 3 } },
-    { id: 'q25c', label: { en: 'Notebook-based tutorials with information sets and metrics.', ar: 'دروس عبر Notebooks تتضمن information sets ومقاييس تقييم.' }, weights: { ai_data: 3 } },
-    { id: 'q25d', label: { en: 'Capture-the-flag labs and security case studies.', ar: 'مختبرات Capture-the-Flag ودراسات حالات أمنية.' }, weights: { cybersecurity: 3 } }
+  { id: 'q25', category: 'learning_style', prompt: { en: 'After a small class app, what would you review first to learn faster?', ar: 'بعد إنهاء تطبيق صغير للمادة، ما أول شيء تراجعه لتتعلّم أسرع؟' }, options: [
+    { id: 'q25a', label: { en: 'How the screens looked and where classmates got confused.', ar: 'شكل الشاشات وأين ارتبك الزملاء أثناء الاستخدام.' }, weights: { ui_ux: 2, frontend: 1 } },
+    { id: 'q25b', label: { en: 'How click, logic, and saved data worked together as one feature.', ar: 'كيف عملت الضغطة والمنطق والحفظ معًا كميزة واحدة.' }, weights: { software_engineer: 3 } },
+    { id: 'q25c', label: { en: 'Which usage patterns appeared and what they suggest improving next.', ar: 'ما الأنماط التي ظهرت في الاستخدام وماذا تقترح للتحسين التالي.' }, weights: { ai_data: 3 } },
+    { id: 'q25d', label: { en: 'Which private details were exposed and how to block that early.', ar: 'ما البيانات الخاصة التي قد تنكشف وكيف نمنع ذلك مبكرًا.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q26', category: 'learning_style', prompt: { en: 'When practicing, you prefer to start by:', ar: 'عند التدرّب، تفضّل أن تبدأ بـ:' }, options: [
-    { id: 'q26a', label: { en: 'Building a visible demo and refining details.', ar: 'بناء Demo واضح ثم صقل التفاصيل.' }, weights: { frontend: 3, ui_ux: 1 } },
-    { id: 'q26b', label: { en: 'Creating robust service logic and tests.', ar: 'إنشاء منطق خدمات قوي مع اختبارات.' }, weights: { backend: 3 } },
-    { id: 'q26c', label: { en: 'Running experiments and comparing outcomes.', ar: 'تنفيذ تجارب ومقارنة النتائج.' }, weights: { ai_data: 3 } },
-    { id: 'q26d', label: { en: 'Configuring secure app runtime setup in a sandbox.', ar: 'إعداد بنية تحتية آمنة داخل بيئة Sandbox.' }, weights: { devops_cloud: 2, cybersecurity: 2 } }
+  { id: 'q26', category: 'learning_style', prompt: { en: 'When you start practicing a new idea, what do you build first?', ar: 'عندما تبدأ التدرّب على فكرة جديدة، ماذا تبني أولًا؟' }, options: [
+    { id: 'q26a', label: { en: 'A quick page people can click through right away.', ar: 'صفحة سريعة يمكن للناس التجربة عليها مباشرة.' }, weights: { frontend: 3 } },
+    { id: 'q26b', label: { en: 'The hidden steps that receive input and return the right result.', ar: 'الخطوات الخفية التي تستقبل الطلب وتُرجع النتيجة الصحيحة.' }, weights: { backend: 3 } },
+    { id: 'q26c', label: { en: 'A simple full flow from idea to working feature, even if basic.', ar: 'مسار كامل بسيط من الفكرة إلى ميزة تعمل، حتى لو كانت أساسية.' }, weights: { software_engineer: 3 } },
+    { id: 'q26d', label: { en: 'A setup that keeps the app running smoothly during busy times.', ar: 'إعداد يجعل التطبيق يعمل بثبات وقت ضغط الاستخدام.' }, weights: { devops_cloud: 3 } }
   ]},
-  { id: 'q27', category: 'learning_style', prompt: { en: 'How do you know you truly learned a topic?', ar: 'كيف تعرف أنك تعلّمت موضوعًا بشكل حقيقي؟' }, options: [
-    { id: 'q27a', label: { en: 'I can make it simple and usable for others.', ar: 'عندما أستطيع تبسيطه وجعله قابلًا للاستخدام للآخرين.' }, weights: { ui_ux: 2, frontend: 2 } },
-    { id: 'q27b', label: { en: 'I can explain internal trade-offs and constraints.', ar: 'عندما أستطيع شرح المفاضلات الداخلية والقيود.' }, weights: { backend: 3 } },
-    { id: 'q27c', label: { en: 'I can measure improvement with reliable metrics.', ar: 'عندما أستطيع قياس التحسّن بمقاييس موثوقة.' }, weights: { ai_data: 3 } },
-    { id: 'q27d', label: { en: 'I can spot risks and prevent common failures.', ar: 'عندما أستطيع رصد المخاطر ومنع الأعطال الشائعة.' }, weights: { cybersecurity: 3, devops_cloud: 1 } }
+  { id: 'q27', category: 'learning_style', prompt: { en: 'How do you know you really understood a topic?', ar: 'كيف تعرف أنك فهمت موضوعًا فعلًا؟' }, options: [
+    { id: 'q27a', label: { en: 'I can make it clearer so a new student uses it without help.', ar: 'أقدر أجعله أوضح حتى يستخدمه طالب جديد بدون مساعدة.' }, weights: { ui_ux: 3 } },
+    { id: 'q27b', label: { en: 'I can trace what happens behind the screen step by step.', ar: 'أقدر أتبع ما يحدث خلف الشاشة خطوة بخطوة.' }, weights: { backend: 2, software_engineer: 1 } },
+    { id: 'q27c', label: { en: 'I can compare two ideas and show which one worked better.', ar: 'أقدر أقارن فكرتين وأوضح أيهما أعطت نتيجة أفضل.' }, weights: { ai_data: 3 } },
+    { id: 'q27d', label: { en: 'I can point out weak spots that may expose user accounts or data.', ar: 'أقدر أحدد النقاط الضعيفة التي قد تكشف حسابات أو بيانات المستخدمين.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q28', category: 'learning_style', prompt: { en: 'Which assignment format motivates you most?', ar: 'أي نوع من الواجبات يحفّزك أكثر؟' }, options: [
-    { id: 'q28a', label: { en: 'Prototype challenge with user feedback.', ar: 'تحدّي Prototype يتضمن ملاحظات مستخدمين.' }, weights: { ui_ux: 3, frontend: 1 } },
-    { id: 'q28b', label: { en: 'Service implementation with strict test cases.', ar: 'تنفيذ خدمة مع حالات اختبار صارمة.' }, weights: { backend: 3 } },
-    { id: 'q28c', label: { en: 'Data challenge with prediction and evaluation.', ar: 'تحدّي بيانات يشمل التنبؤ والتقييم.' }, weights: { ai_data: 3 } },
-    { id: 'q28d', label: { en: 'Incident simulation and recovery drill.', ar: 'محاكاة Incident وتمرين على التعافي.' }, weights: { devops_cloud: 2, cybersecurity: 2 } }
+  { id: 'q28', category: 'learning_style', prompt: { en: 'Which class task would make you most excited to work late on it?', ar: 'أي مهمة دراسية تجعلك متحمسًا حتى لو احتجت وقتًا أطول؟' }, options: [
+    { id: 'q28a', label: { en: 'Improve a confusing page until classmates finish it easily.', ar: 'تحسين صفحة مربكة حتى يتمكن الزملاء من إنهائها بسهولة.' }, weights: { ui_ux: 2, frontend: 1 } },
+    { id: 'q28b', label: { en: 'Build the hidden rules that keep student records accurate.', ar: 'بناء القواعد الخفية التي تحفظ سجلات الطلاب بشكل صحيح.' }, weights: { backend: 3 } },
+    { id: 'q28c', label: { en: 'Study club activity data and suggest what to improve next.', ar: 'دراسة بيانات نشاط النادي واقتراح ما يجب تحسينه لاحقًا.' }, weights: { ai_data: 3 } },
+    { id: 'q28d', label: { en: 'Turn a vague request into a small complete feature for the team.', ar: 'تحويل طلب غير واضح إلى ميزة صغيرة مكتملة للفريق.' }, weights: { software_engineer: 3 } }
   ]},
-  { id: 'q29', category: 'learning_style', prompt: { en: 'When stuck, you are most likely to:', ar: 'عندما تتعثر، ما الذي تُرجّح أن تفعله؟' }, options: [
-    { id: 'q29a', label: { en: 'Replay the user flow and simplify interactions.', ar: 'إعادة تتبّع مسار المستخدم وتبسيط التفاعلات.' }, weights: { frontend: 2, ui_ux: 1 } },
-    { id: 'q29b', label: { en: 'Read docs and inspect low-level implementation details.', ar: 'قراءة التوثيق وفحص تفاصيل التنفيذ منخفضة المستوى.' }, weights: { backend: 3 } },
-    { id: 'q29c', label: { en: 'Collect evidence from logs and performance traces.', ar: 'جمع أدلة من السجلات ومسارات الأداء.' }, weights: { ai_data: 2, devops_cloud: 1 } },
-    { id: 'q29d', label: { en: 'Review security assumptions and permissions.', ar: 'مراجعة افتراضات الأمان والصلاحيات.' }, weights: { cybersecurity: 3 } }
+  { id: 'q29', category: 'learning_style', prompt: { en: 'When your app behaves strangely, what do you do first?', ar: 'عندما يتصرف تطبيقك بشكل غريب، ما أول خطوة تقوم بها؟' }, options: [
+    { id: 'q29a', label: { en: 'Replay the clicks and fix what looks confusing on screen.', ar: 'أعيد خطوات الضغط وأصلح ما يبدو مربكًا على الشاشة.' }, weights: { frontend: 2, ui_ux: 1 } },
+    { id: 'q29b', label: { en: 'Check the hidden logic path to find exactly where it broke.', ar: 'أفحص مسار المنطق الخفي لأعرف أين حدث الخلل بالضبط.' }, weights: { backend: 3 } },
+    { id: 'q29c', label: { en: 'Break the issue into smaller parts and test each part in order.', ar: 'أقسم المشكلة إلى أجزاء صغيرة وأختبر كل جزء بالترتيب.' }, weights: { software_engineer: 3 } },
+    { id: 'q29d', label: { en: 'Review who can open or edit data to prevent unsafe access.', ar: 'أراجع من يمكنه فتح البيانات أو تعديلها لمنع الوصول غير الآمن.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q30', category: 'learning_style', prompt: { en: 'You retain knowledge best when:', ar: 'تحتفظ بالمعرفة بشكل أفضل عندما:' }, options: [
-    { id: 'q30a', label: { en: 'I iterate on visuals and interaction details.', ar: 'أكرّر التحسين على العناصر البصرية وتفاصيل التفاعل.' }, weights: { frontend: 2, ui_ux: 2 } },
-    { id: 'q30b', label: { en: 'I build systems end-to-end and test them.', ar: 'أبني أنظمة كاملة من البداية للنهاية وأختبرها.' }, weights: { backend: 2, devops_cloud: 1 } },
-    { id: 'q30c', label: { en: 'I compare approaches with data-backed results.', ar: 'أقارن بين الأساليب اعتمادًا على نتائج مدعومة بالبيانات.' }, weights: { ai_data: 3 } },
-    { id: 'q30d', label: { en: 'I model threats and defend against them.', ar: 'أُجري التفكير في طرق إساءة الاستخدام وأبني وسائل دفاع ضدها.' }, weights: { cybersecurity: 3 } }
+  { id: 'q30', category: 'learning_style', prompt: { en: 'You remember lessons best when you:', ar: 'تتذكر ما تعلمته بشكل أفضل عندما:' }, options: [
+    { id: 'q30a', label: { en: 'Build a clean screen and watch real users try it.', ar: 'تبني شاشة واضحة وتشاهد مستخدمين حقيقيين وهم يجربونها.' }, weights: { frontend: 2, ui_ux: 1 } },
+    { id: 'q30b', label: { en: 'Connect the screen to saved data and make the full flow work.', ar: 'تربط الشاشة بالبيانات المحفوظة وتجعل المسار كاملًا يعمل.' }, weights: { software_engineer: 2, backend: 1 } },
+    { id: 'q30c', label: { en: 'Collect results from classmates and compare before and after.', ar: 'تجمع نتائج الزملاء وتقارن قبل التعديل وبعده.' }, weights: { ai_data: 3 } },
+    { id: 'q30d', label: { en: 'Prepare the app to stay available even when many students open it.', ar: 'تجهّز التطبيق ليبقى متاحًا حتى عند دخول عدد كبير من الطلاب.' }, weights: { devops_cloud: 3 } }
   ]},
 
-  { id: 'q31', category: 'real_world_scenario', prompt: { en: 'A school portal update accidentally exposes private data. What would you lead first?', ar: 'تحديث في بوابة مدرسية كشف بيانات خاصة بالخطأ. ما الذي ستقوده أولًا؟' }, options: [
-    { id: 'q31a', label: { en: 'User-facing messaging so affected users understand next steps.', ar: 'رسائل واضحة للمستخدمين المتأثرين ليفهموا الخطوات التالية.' }, weights: { ui_ux: 2, frontend: 1 } },
-    { id: 'q31b', label: { en: 'Service-side rollback and data access patching.', ar: 'التراجع على مستوى الخدمة مع إصلاح صلاحيات الوصول للبيانات.' }, weights: { backend: 2, devops_cloud: 1 } },
-    { id: 'q31c', label: { en: 'Forensic analysis to map affected records quickly.', ar: 'تحليل جنائي رقمي لتحديد السجلات المتأثرة بسرعة.' }, weights: { ai_data: 2, cybersecurity: 1 } },
-    { id: 'q31d', label: { en: 'Containment plan, credential resets, and audit controls.', ar: 'خطة احتواء مع إعادة تعيين بيانات الاعتماد وضوابط تدقيق.' }, weights: { cybersecurity: 3 } }
+  { id: 'q31', category: 'real_world_scenario', prompt: { en: 'Before showing your project demo, you notice some student details are visible to everyone. What do you handle first?', ar: 'قبل عرض المشروع تكتشف أن بعض بيانات الطلاب ظاهرة للجميع. ما أول شيء تتعامل معه؟' }, options: [
+    { id: 'q31a', label: { en: 'Make a clear message so users know what happened and what to do.', ar: 'أكتب رسالة واضحة للمستخدمين تشرح ما حدث وما المطلوب منهم.' }, weights: { ui_ux: 2, frontend: 1 } },
+    { id: 'q31b', label: { en: 'Close the wrong data path and verify only the right people can view records.', ar: 'أغلق المسار الخاطئ للبيانات وأتأكد أن العرض للمخولين فقط.' }, weights: { backend: 2, cybersecurity: 1 } },
+    { id: 'q31c', label: { en: 'List exactly which records were affected to guide the next fixes.', ar: 'أحدد بالضبط السجلات المتأثرة حتى نعرف خطوات الإصلاح التالية.' }, weights: { ai_data: 3 } },
+    { id: 'q31d', label: { en: 'Coordinate quick steps across screens, logic, and data so the issue is fully fixed.', ar: 'أنسق خطوات سريعة عبر الشاشات والمنطق والبيانات حتى يُحلّ الخلل كاملًا.' }, weights: { software_engineer: 3 } }
   ]},
-  { id: 'q32', category: 'real_world_scenario', prompt: { en: 'Your app launches tomorrow and last-minute failures appear. You focus on:', ar: 'تطبيقك سيُطلق غدًا وظهرت أعطال في اللحظة الأخيرة. على ماذا تركّز؟' }, options: [
-    { id: 'q32a', label: { en: 'Clear fallback UI and communication for users.', ar: 'واجهة UI بديلة واضحة مع تواصل مباشر للمستخدمين.' }, weights: { frontend: 2, ui_ux: 1 } },
-    { id: 'q32b', label: { en: 'Critical hidden-logic fixes with safe steps before making the app available.', ar: 'إصلاحات أساسية في المنطق الخفي مع خطوات آمنة لإتاحة التطبيق.' }, weights: { backend: 3 } },
-    { id: 'q32c', label: { en: 'Release health checks and rollback automation.', ar: 'فحوصات صحة الإصدار وأتمتة التراجع (Rollback).' }, weights: { devops_cloud: 3 } },
-    { id: 'q32d', label: { en: 'Security verification of hotfixes before release.', ar: 'التحقق أمنيًا من الإصلاحات السريعة قبل الإطلاق.' }, weights: { cybersecurity: 3 } }
+  { id: 'q32', category: 'real_world_scenario', prompt: { en: 'Your team will demo tomorrow, but the app suddenly fails on some phones. You focus on:', ar: 'فريقك سيعرض غدًا، لكن التطبيق تعطل فجأة على بعض الهواتف. على ماذا تركّز؟' }, options: [
+    { id: 'q32a', label: { en: 'A simple backup screen so classmates can still finish key steps.', ar: 'شاشة بديلة بسيطة حتى يكمل الزملاء الخطوات الأساسية.' }, weights: { frontend: 2, ui_ux: 1 } },
+    { id: 'q32b', label: { en: 'Fixing the hidden step causing wrong results before the demo.', ar: 'إصلاح الخطوة الخفية التي تسبب نتائج خاطئة قبل العرض.' }, weights: { backend: 3 } },
+    { id: 'q32c', label: { en: 'Keeping the app stable for everyone during demo time.', ar: 'الحفاظ على ثبات التطبيق للجميع وقت العرض.' }, weights: { devops_cloud: 3 } },
+    { id: 'q32d', label: { en: 'Checking that quick fixes did not open unsafe access.', ar: 'التأكد أن الإصلاحات السريعة لم تفتح وصولًا غير آمن.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q33', category: 'real_world_scenario', prompt: { en: 'A nonprofit asks for a low-budget tech solution. You suggest:', ar: 'منظمة غير ربحية طلبت حلًا تقنيًا منخفض التكلفة. ماذا تقترح؟' }, options: [
-    { id: 'q33a', label: { en: 'Simple mobile-friendly interface with clear workflows.', ar: 'واجهة بسيطة مناسبة للجوال مع مسارات عمل واضحة.' }, weights: { frontend: 2, ui_ux: 2 } },
-    { id: 'q33b', label: { en: 'Lean backend with maintainable core features.', ar: 'منطق خلفي بسيط بميزات أساسية يسهل تطويرها لاحقًا.' }, weights: { backend: 3 } },
-    { id: 'q33c', label: { en: 'Basic analytics to monitor impact and improve over time.', ar: 'تحليلات أساسية لمتابعة الأثر والتحسين مع الوقت.' }, weights: { ai_data: 3 } },
-    { id: 'q33d', label: { en: 'Secure hosting and least-privilege permissions from day one.', ar: 'استضافة آمنة وصلاحيات بأقل امتياز منذ اليوم الأول.' }, weights: { devops_cloud: 1, cybersecurity: 2 } }
+  { id: 'q33', category: 'real_world_scenario', prompt: { en: 'A student club asks for a simple tool to organize events. What would you suggest first?', ar: 'نادي طلابي يطلب أداة بسيطة لتنظيم الفعاليات. ماذا تقترح أولًا؟' }, options: [
+    { id: 'q33a', label: { en: 'Start with an easy page where members can add and find events quickly.', ar: 'البدء بصفحة سهلة يضيف فيها الأعضاء الفعاليات ويجدونها بسرعة.' }, weights: { ui_ux: 2, frontend: 1 } },
+    { id: 'q33b', label: { en: 'Start with clear rules for saving event details without mistakes.', ar: 'البدء بقواعد واضحة لحفظ تفاصيل الفعاليات بدون أخطاء.' }, weights: { backend: 3 } },
+    { id: 'q33c', label: { en: 'Track attendance patterns to learn what events students prefer.', ar: 'متابعة أنماط الحضور لمعرفة الفعاليات التي يفضلها الطلاب.' }, weights: { ai_data: 3 } },
+    { id: 'q33d', label: { en: 'Plan a small complete version the team can build and use this week.', ar: 'تخطيط نسخة صغيرة مكتملة يستطيع الفريق بناءها واستخدامها هذا الأسبوع.' }, weights: { software_engineer: 3 } }
   ]},
-  { id: 'q34', category: 'real_world_scenario', prompt: { en: 'You must present project outcomes to school leaders. You lead with:', ar: 'عليك عرض نتائج المشروع على قيادات المدرسة. بماذا تبدأ؟' }, options: [
-    { id: 'q34a', label: { en: 'Before/after user journey improvements.', ar: 'تحسينات رحلة المستخدم قبل التنفيذ وبعده.' }, weights: { ui_ux: 3, frontend: 1 } },
-    { id: 'q34b', label: { en: 'System reliability and response-time improvements.', ar: 'تحسّن اعتمادية النظام وزمن الاستجابة.' }, weights: { backend: 2, devops_cloud: 1 } },
-    { id: 'q34c', label: { en: 'Data evidence showing measurable impact.', ar: 'أدلة من البيانات تُظهر أثرًا قابلًا للقياس.' }, weights: { ai_data: 3 } },
-    { id: 'q34d', label: { en: 'Risk reduction and security hardening outcomes.', ar: 'نتائج خفض المخاطر وتعزيز التحصين الأمني.' }, weights: { cybersecurity: 3 } }
+  { id: 'q34', category: 'real_world_scenario', prompt: { en: 'When presenting your project to instructors, what do you like to show first?', ar: 'عند عرض مشروعك على الأساتذة، ماذا تحب أن تعرض أولًا؟' }, options: [
+    { id: 'q34a', label: { en: 'How the new screens made tasks faster and less confusing.', ar: 'كيف جعلت الشاشات الجديدة المهام أسرع وأقل إرباكًا.' }, weights: { frontend: 2, ui_ux: 1 } },
+    { id: 'q34b', label: { en: 'How the app rules now give correct results more consistently.', ar: 'كيف أصبحت قواعد التطبيق تعطي نتائج صحيحة بشكل أكثر ثباتًا.' }, weights: { backend: 3 } },
+    { id: 'q34c', label: { en: 'Numbers that compare student results before and after your update.', ar: 'أرقام تقارن نتائج الطلاب قبل التحديث وبعده.' }, weights: { ai_data: 3 } },
+    { id: 'q34d', label: { en: 'How you balanced user needs and build effort to deliver one solid feature.', ar: 'كيف وازنت بين احتياج المستخدم وجهد البناء لتقديم ميزة قوية واحدة.' }, weights: { software_engineer: 3 } }
   ]},
-  { id: 'q35', category: 'real_world_scenario', prompt: { en: 'A mobile network outage affects many users. Your first plan is:', ar: 'انقطاع شبكة الجوال أثّر على عدد كبير من المستخدمين. ما خطتك الأولى؟' }, options: [
-    { id: 'q35a', label: { en: 'Design lightweight screens that degrade gracefully.', ar: 'تصميم شاشات خفيفة تحافظ على تجربة مقبولة عند ضعف الاتصال.' }, weights: { frontend: 3, ui_ux: 1 } },
-    { id: 'q35b', label: { en: 'Queue writes and sync once connection returns.', ar: 'وضع عمليات الكتابة في طابور ثم مزامنتها عند عودة الاتصال.' }, weights: { backend: 3 } },
-    { id: 'q35c', label: { en: 'Adjust app runtime setup and monitor recovery metrics.', ar: 'تعديل البنية التحتية ومراقبة مؤشرات التعافي.' }, weights: { devops_cloud: 3 } },
-    { id: 'q35d', label: { en: 'Ensure offline behavior does not bypass protections.', ar: 'ضمان أن وضع Offline لا يتجاوز ضوابط الحماية.' }, weights: { cybersecurity: 3 } }
+  { id: 'q35', category: 'real_world_scenario', prompt: { en: 'Many students open your tool at once during registration hour. What do you fix first?', ar: 'عدد كبير من الطلاب فتحوا أداتك في وقت التسجيل. ما أول شيء تصلحه؟' }, options: [
+    { id: 'q35a', label: { en: 'Simplify heavy screens so they load and respond faster.', ar: 'تبسيط الشاشات الثقيلة لتفتح وتستجيب بشكل أسرع.' }, weights: { frontend: 3 } },
+    { id: 'q35b', label: { en: 'Organize save requests so no student input is lost.', ar: 'تنظيم طلبات الحفظ حتى لا تضيع مدخلات أي طالب.' }, weights: { backend: 3 } },
+    { id: 'q35c', label: { en: 'Keep the app available and steady while traffic stays high.', ar: 'الحفاظ على بقاء التطبيق متاحًا وثابتًا مع استمرار الضغط.' }, weights: { devops_cloud: 3 } },
+    { id: 'q35d', label: { en: 'Make sure quick traffic fixes do not weaken account safety.', ar: 'التأكد أن حلول الضغط السريعة لا تضعف أمان الحسابات.' }, weights: { cybersecurity: 3 } }
   ]},
-  { id: 'q36', category: 'real_world_scenario', prompt: { en: 'A student startup asks you to choose one quality bar before scaling. You pick:', ar: 'شركة ناشئة طلابية طلبت منك اختيار معيار جودة واحد قبل التوسع. ماذا تختار؟' }, options: [
-    { id: 'q36a', label: { en: 'Consistent experience across devices and abilities.', ar: 'تجربة متسقة عبر الأجهزة ولمختلف قدرات المستخدمين.' }, weights: { ui_ux: 2, frontend: 2 } },
-    { id: 'q36b', label: { en: 'Stable service contracts and clear data ownership.', ar: 'عقود خدمات مستقرة وملكية بيانات واضحة.' }, weights: { backend: 3 } },
-    { id: 'q36c', label: { en: 'Reliable monitoring with alert-driven operations.', ar: 'مراقبة موثوقة مع عمليات تشغيل مبنية على التنبيهات.' }, weights: { devops_cloud: 3 } },
-    { id: 'q36d', label: { en: 'Security-by-default configurations and review gates.', ar: 'إعدادات آمنة افتراضيًا مع بوابات مراجعة أمنية.' }, weights: { cybersecurity: 3 } }
+  { id: 'q36', category: 'real_world_scenario', prompt: { en: 'After finishing a team project, what quality check matters most to you before sharing it campus-wide?', ar: 'بعد إنهاء مشروع جماعي، ما فحص الجودة الأهم لديك قبل نشره على نطاق الجامعة؟' }, options: [
+    { id: 'q36a', label: { en: 'Students can use it easily from first click without extra explanation.', ar: 'يستطيع الطلاب استخدامه بسهولة من أول ضغطة بدون شرح إضافي.' }, weights: { ui_ux: 3 } },
+    { id: 'q36b', label: { en: 'The full path works: input, processing, and correct saved output.', ar: 'المسار الكامل يعمل: إدخال، معالجة، ثم حفظ صحيح للنتيجة.' }, weights: { software_engineer: 2, backend: 1 } },
+    { id: 'q36c', label: { en: 'It keeps working smoothly even when many students use it together.', ar: 'يبقى يعمل بسلاسة حتى عند استخدامه من عدد كبير من الطلاب معًا.' }, weights: { devops_cloud: 3 } },
+    { id: 'q36d', label: { en: 'Private data stays protected and only the right users can see it.', ar: 'تبقى البيانات الخاصة محمية ولا يراها إلا المستخدم المناسب.' }, weights: { cybersecurity: 3 } }
   ]}
 ];
