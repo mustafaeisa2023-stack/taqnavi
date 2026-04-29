@@ -11,6 +11,7 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
   const { primary, top3 } = result;
   const { lang } = useLanguage();
   const t = UI_TEXT[lang];
+
   return (
     <section className="card result-layout">
       <div className="toolbar result-toolbar"><LanguageToggle /><ThemeToggle /></div>
