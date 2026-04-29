@@ -3,6 +3,7 @@ import { ResultCard } from './ResultCard';
 import { useLanguage } from '../LanguageContext';
 import { UI_TEXT } from '../i18n';
 import { LanguageToggle } from './LanguageToggle';
+import { ThemeToggle } from './ThemeToggle';
 
 type ResultScreenProps = { result: QuizResult; onRestart: () => void; };
 
@@ -12,7 +13,7 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
   const t = UI_TEXT[lang];
   return (
     <section className="card result-layout">
-      <LanguageToggle />
+      <div className="toolbar"><LanguageToggle /><ThemeToggle /></div>
       <article className="primary-match"><p className="chip">{t.primaryMatch}</p><h2>{primary.title[lang]}</h2><p className="lead">{primary.shortDescription[lang]}</p></article>
       <section className="content-card"><h3>{t.whyFits}</h3><p>{primary.whyItFits[lang]}</p></section>
       <section className="content-card"><h3>{t.strengths}</h3><ul>{primary.strengths[lang].map((s) => <li key={s}>{s}</li>)}</ul></section>
