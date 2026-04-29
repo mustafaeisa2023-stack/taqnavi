@@ -13,7 +13,7 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
   const t = UI_TEXT[lang];
   return (
     <section className="card result-layout">
-      <div className="toolbar"><LanguageToggle /><ThemeToggle /></div>
+      <div className="toolbar result-toolbar"><LanguageToggle /><ThemeToggle /></div>
       <article className="primary-match"><p className="chip">{t.primaryMatch}</p><h2>{primary.title[lang]}</h2><p className="lead">{primary.shortDescription[lang]}</p></article>
       <section className="content-card"><h3>{t.whyFits}</h3><p>{primary.whyItFits[lang]}</p></section>
       <section className="content-card"><h3>{t.strengths}</h3><ul>{primary.strengths[lang].map((s) => <li key={s}>{s}</li>)}</ul></section>
@@ -24,7 +24,7 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
       <section className="content-card"><h3>{t.starterTopics}</h3><ul>{primary.starterTopics[lang].map((topic) => <li key={topic}>{topic}</li>)}</ul></section>
       <section className="content-card top3-section"><h3>{t.top3}</h3><div className="top3">{top3.map((entry, i) => <ResultCard key={entry.track.id} rank={i + 1} title={entry.track.title[lang]} percentage={entry.percentage} reason={entry.track.whyItFits[lang]} />)}</div></section>
       <p className="disclaimer">{t.disclaimer}</p>
-      <button className="primary restart" type="button" onClick={onRestart}>{t.restart}</button>
+      <div className="result-actions"><button className="primary restart" type="button" onClick={onRestart}>{t.restart}</button></div>
     </section>
   );
 }
