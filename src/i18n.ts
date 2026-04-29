@@ -64,7 +64,7 @@ export const UI_TEXT = {
     start: 'ابدأ الاختبار',
     logoAlt: 'شعار Technavi',
     boothNotice: 'تنبيه: هذا التطبيق مخصص لفعالية الجناح وسيتم إزالته بعد انتهاء الفعالية.',
-    credit: 'تم تطويره من قبل فريق ANUnity بمساعدة تطويرية باستخدام Codex.',
+    credit: 'تم تطويره من قبل فريق ANUnity بمساعدة Codex.',
     quizDetails: 'تفاصيل الاختبار'
   }
 } as const;
