@@ -6,7 +6,7 @@ describe('scoring', () => {
   it('returns deterministic primary track based on selected options', () => {
     const selected = QUESTIONS.map((q) => q.options[1].id);
     const result = buildQuizResult(QUESTIONS, selected);
-    expect(result.primary.id).toBe('backend');
+    expect(result.primary.id).toBe('software_engineer');
     expect(result.top3).toHaveLength(3);
   });
 
