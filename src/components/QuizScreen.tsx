@@ -8,8 +8,8 @@ import { ThemeToggle } from './ThemeToggle';
 import { useTheme } from '../ThemeContext';
 import { orderOptions } from '../lib/optionOrder';
 
-type QuizScreenProps = { question: Question; index: number; total: number; selectedOptionId?: string; onSelect: (optionId: string) => void; onNext: () => void; error?: string; sessionSeed: string; };
-export function QuizScreen({ question, index, total, selectedOptionId, onSelect, onNext, error, sessionSeed }: QuizScreenProps) {
+type QuizScreenProps = { question: Question; index: number; total: number; answeredCount: number; selectedOptionId?: string; onSelect: (optionId: string) => void; onNext: () => void; error?: string; sessionSeed: string; };
+export function QuizScreen({ question, index, total, answeredCount, selectedOptionId, onSelect, onNext, error, sessionSeed }: QuizScreenProps) {
   const isLast = index === total - 1;
   const hasSelection = Boolean(selectedOptionId);
   const { lang } = useLanguage();
@@ -22,7 +22,7 @@ export function QuizScreen({ question, index, total, selectedOptionId, onSelect,
     <section className="card quiz-screen">
       <div className="toolbar"><LanguageToggle /><ThemeToggle /></div>
       <img src={logoSrc} alt={t.logoAlt} className="brand-logo brand-logo-inline" />
-      <ProgressBar current={index + 1} total={total} />
+      <ProgressBar current={index + 1} total={total} answered={answeredCount} />
       <h2 className="question-title">{question.prompt[lang]}</h2>
       <div className="options" role="radiogroup" aria-label={`${t.questionOf(index + 1, total)}`}>
         {orderedOptions.map((option) => <button key={option.id} type="button" className={`option ${selectedOptionId === option.id ? 'selected' : ''}`} aria-pressed={selectedOptionId === option.id} onClick={() => onSelect(option.id)}>{option.label[lang]}</button>)}
