@@ -34,7 +34,9 @@ function AppInner() {
 
   if (stage === 'start') return <main className="shell"><StartScreen onStart={startQuiz} /></main>;
   if (stage === 'result' && result) return <main className="shell"><ResultScreen result={result} onRestart={startQuiz} /></main>;
-  return <main className="shell"><QuizScreen question={quizQuestions[currentIndex]} index={currentIndex} total={quizQuestions.length} selectedOptionId={answers[currentIndex]} onSelect={handleSelect} onNext={handleNext} error={error} sessionSeed={sessionSeed} /></main>;
+  const answeredCount = answers.filter(Boolean).length;
+
+  return <main className="shell"><QuizScreen question={quizQuestions[currentIndex]} index={currentIndex} total={quizQuestions.length} answeredCount={answeredCount} selectedOptionId={answers[currentIndex]} onSelect={handleSelect} onNext={handleNext} error={error} sessionSeed={sessionSeed} /></main>;
 }
 
 export default function App() { return <LanguageProvider><ThemeProvider><AppInner /></ThemeProvider></LanguageProvider>; }

@@ -1,10 +1,10 @@
 import { useLanguage } from '../LanguageContext';
 import { UI_TEXT } from '../i18n';
 
-type ProgressBarProps = { current: number; total: number; };
+type ProgressBarProps = { current: number; total: number; answered: number; };
 
-export function ProgressBar({ current, total }: ProgressBarProps) {
-  const percentage = Math.round((current / total) * 100);
+export function ProgressBar({ current, total, answered }: ProgressBarProps) {
+  const percentage = total > 0 ? Math.round((answered / total) * 100) : 0;
   const { lang } = useLanguage();
   const t = UI_TEXT[lang];
   return (
